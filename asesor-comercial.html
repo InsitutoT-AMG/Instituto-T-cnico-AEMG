@@ -1,0 +1,2796 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Técnico Laboral en Asesor Comercial - Instituto Técnico Asociación Escolar María Goretti.">
+
+    <meta name="keywords"
+        content="Técnico Laboral, Asesor Comercial, Asociación Escolar María Goretti, Instituto Técnico, Pasto">
+
+    <meta name="author" content="Instituto Técnico Asociación Escolar María Goretti">
+
+    <title>Técnico Laboral en Asesor Comercial | Instituto Técnico</title>
+
+    <!-- GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- ESTILOS DEL SITIO -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        :root {
+            --azul-principal: #123b66;
+            --azul-secundario: #1d5d91;
+            --azul-claro: #eaf3fb;
+            --dorado: #c79a3b;
+            --dorado-claro: #f5e7c4;
+            --blanco: #ffffff;
+            --gris: #f6f8fa;
+            --texto: #333333;
+            --sombra: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--texto);
+            background: #ffffff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* =========================================
+       HERO / PORTADA
+    ========================================= */
+
+        .programa-hero {
+            min-height: 600px;
+
+            padding: 110px 20px 80px;
+
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            overflow: hidden;
+
+            background-color: var(--azul-principal);
+
+            /* Imagen sin fondo */
+            background-image: url("imagenesA/portada.jpg");
+            background-repeat: no-repeat;
+
+
+            background-size: auto 115%;
+            background-position: right center;
+        }
+
+
+        .programa-hero::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(90deg,
+                    var(--azul-principal) 0%,
+                    rgba(18, 59, 102, 0.98) 25%,
+                    rgba(18, 59, 102, 0.80) 40%,
+                    rgba(18, 59, 102, 0.25) 62%,
+                    rgba(18, 59, 102, 0) 78%);
+
+            z-index: 1;
+        }
+
+
+        .programa-hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            width: 100%;
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            text-align: left;
+
+            color: white;
+
+            padding-left: 30px;
+        }
+
+        /* =========================================
+       ICONO DEL PROGRAMA
+    ========================================= */
+
+        .programa-hero-icon {
+            width: 58px;
+            height: 58px;
+
+            margin: 0 0 22px;
+
+            border-radius: 14px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(199, 154, 59, 0.18);
+
+            border: 1px solid rgba(199, 154, 59, 0.55);
+
+            font-size: 26px;
+
+            color: var(--dorado);
+        }
+
+        /* =========================================
+       TITULO PRINCIPAL
+    ========================================= */
+
+        .programa-hero h1 {
+            max-width: 650px;
+
+            font-size: clamp(2.4rem, 5vw, 4.2rem);
+
+            font-weight: 800;
+
+            line-height: 1.08;
+
+            margin-bottom: 22px;
+
+            letter-spacing: -1px;
+
+            color: white;
+
+            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.20);
+        }
+
+        /*
+       Segunda línea del título
+    */
+
+        .programa-hero h1 span {
+            display: block;
+
+            color: var(--blanco);
+
+            margin-top: 5px;
+        }
+
+        /* =========================================
+       DESCRIPCIÓN DEL HERO
+    ========================================= */
+
+        .programa-hero p {
+            max-width: 620px;
+
+            margin: 0 0 32px;
+
+            font-size: 1.05rem;
+
+            line-height: 1.7;
+
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        /* =========================================
+       BOTONES
+    ========================================= */
+
+        .btn-programa {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 14px 28px;
+
+            border-radius: 50px;
+
+            text-decoration: none;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-weight: 600;
+
+            transition: all 0.3s ease;
+
+            cursor: pointer;
+        }
+
+        /* Botón principal */
+
+        .btn-programa-primary {
+            background: var(--dorado);
+
+            color: black;
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-programa-primary:hover {
+            background: var(--blanco);
+
+            color: white;
+
+            transform: translateY(-3px);
+        }
+
+        /* Botón secundario */
+
+        .btn-programa-secondary {
+            margin-left: 10px;
+
+            border: 2px solid rgba(255, 255, 255, 0.9);
+
+            color: white;
+
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .btn-programa-secondary:hover {
+            background: white;
+
+            color: var(--azul-principal);
+
+            transform: translateY(-3px);
+        }
+
+        /* =========================================
+       SECCIONES
+    ========================================= */
+
+        .programa-section {
+            padding: 90px 0;
+        }
+
+        .programa-section.bg-light-custom {
+            background: var(--gris);
+        }
+
+        /* =========================================
+       ETIQUETA DE SECCIÓN
+    ========================================= */
+
+        .section-label-programa {
+            display: inline-block;
+
+            margin-bottom: 12px;
+
+            font-size: 0.8rem;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            color: var(--dorado);
+        }
+
+        /* =========================================
+       TITULOS DE SECCIÓN
+    ========================================= */
+
+        .programa-title {
+            color: var(--azul-principal);
+
+            font-size: clamp(1.8rem, 4vw, 2.7rem);
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+        .programa-line {
+            width: 65px;
+
+            height: 4px;
+
+            background: var(--dorado);
+
+            margin-bottom: 25px;
+        }
+
+        /* =========================================
+       TEXTO GENERAL
+    ========================================= */
+
+        .programa-text {
+            color: #555;
+
+            line-height: 1.8;
+
+            font-size: 1rem;
+        }
+
+        /* =========================================
+       TARJETAS DE INFORMACIÓN
+    ========================================= */
+
+        .info-programa-card {
+            height: 100%;
+
+            padding: 30px 25px;
+
+            background: white;
+
+            border-radius: 15px;
+
+            box-shadow: var(--sombra);
+
+            text-align: center;
+
+            transition: all 0.3s ease;
+        }
+
+        .info-programa-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .info-programa-icon {
+            width: 65px;
+            height: 65px;
+
+            margin: 0 auto 18px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: var(--azul-claro);
+
+            color: var(--azul-secundario);
+
+            font-size: 25px;
+        }
+
+        .info-programa-card h3 {
+            font-size: 1.05rem;
+
+            color: var(--azul-principal);
+
+            margin-bottom: 10px;
+        }
+
+        .info-programa-card p {
+            margin: 0;
+
+            color: #666;
+        }
+
+        /* =========================================
+       PERFIL DE EGRESO
+    ========================================= */
+
+        .perfil-box {
+            background: var(--azul-principal);
+
+            color: white;
+
+            padding: 45px;
+
+            border-radius: 20px;
+
+            box-shadow: var(--sombra);
+        }
+
+        .perfil-box h2 {
+            color: white;
+        }
+
+        .perfil-box p {
+            color: rgba(255, 255, 255, 0.88);
+
+            line-height: 1.8;
+        }
+
+        .perfil-list {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 25px 0 0;
+        }
+
+        .perfil-list li {
+            margin-bottom: 15px;
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 12px;
+
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .perfil-list i {
+            color: var(--dorado);
+
+            margin-top: 4px;
+        }
+
+        /* =========================================
+       COMPETENCIAS
+    ========================================= */
+
+        .competencia-card {
+            height: 100%;
+
+            padding: 30px;
+
+            background: white;
+
+            border-radius: 15px;
+
+            box-shadow: var(--sombra);
+
+            border-top: 4px solid var(--dorado);
+
+            transition: all 0.3s ease;
+        }
+
+        .competencia-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .competencia-card h3 {
+            color: var(--azul-principal);
+
+            font-size: 1.15rem;
+
+            margin-bottom: 15px;
+        }
+
+        .competencia-card h3 i {
+            color: var(--dorado);
+
+            margin-right: 8px;
+        }
+
+        .competencia-card p {
+            color: #666;
+
+            line-height: 1.7;
+
+            margin-bottom: 0;
+        }
+
+        /* =========================================
+       PLAN DE ESTUDIOS
+    ========================================= */
+
+        .plan-card {
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            box-shadow: var(--sombra);
+        }
+
+        .semestre-title {
+            color: var(--azul-principal);
+
+            font-size: 1.4rem;
+
+            font-weight: 700;
+
+            margin-top: 25px;
+
+            margin-bottom: 10px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            border-bottom: 2px solid var(--dorado);
+
+            padding-bottom: 10px;
+        }
+
+        .semestre-title:first-child {
+            margin-top: 0;
+        }
+
+        .horas-semestre {
+            font-size: 0.9rem;
+
+            background: var(--dorado-claro);
+
+            color: var(--azul-principal);
+
+            padding: 6px 12px;
+
+            border-radius: 20px;
+        }
+
+        .plan-item {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 15px;
+
+            padding: 18px 0;
+
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .plan-item:last-child {
+            border-bottom: none;
+        }
+
+        .plan-number {
+            min-width: 42px;
+
+            height: 42px;
+
+            border-radius: 50%;
+
+            background: var(--azul-principal);
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: 700;
+        }
+
+        .plan-item h4 {
+            font-size: 1rem;
+
+            color: var(--azul-principal);
+
+            margin-bottom: 5px;
+        }
+
+        .plan-item p {
+            margin: 0;
+
+            color: #666;
+        }
+
+        .total-programa {
+            margin-top: 25px;
+
+            padding: 18px;
+
+            background: var(--azul-principal);
+
+            color: white;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-weight: 700;
+
+            font-size: 1.1rem;
+        }
+
+        /* =========================================
+       REQUISITOS
+    ========================================= */
+
+        .requisitos-card {
+            background: var(--azul-claro);
+
+            border-radius: 20px;
+
+            padding: 40px;
+        }
+
+        .requisito {
+            display: flex;
+
+            gap: 15px;
+
+            margin-bottom: 20px;
+        }
+
+        .requisito:last-child {
+            margin-bottom: 0;
+        }
+
+        .requisito i {
+            color: var(--azul-secundario);
+
+            font-size: 20px;
+
+            margin-top: 3px;
+        }
+
+        .requisito p {
+            margin: 0;
+
+            line-height: 1.6;
+        }
+
+        /* =========================================
+       HORARIOS
+    ========================================= */
+
+        .horario-card {
+            background: white;
+
+            border-radius: 15px;
+
+            padding: 30px;
+
+            box-shadow: var(--sombra);
+
+            height: 100%;
+
+            border-top: 4px solid var(--dorado);
+        }
+
+        .horario-card h3 {
+            color: var(--azul-principal);
+
+            font-size: 1.2rem;
+
+            margin-bottom: 18px;
+        }
+
+        .horario-card p {
+            margin-bottom: 10px;
+
+            color: #555;
+
+            line-height: 1.6;
+        }
+
+        .horario-card i {
+            color: var(--dorado);
+
+            margin-right: 8px;
+        }
+
+        /* =========================================
+       PERFIL OCUPACIONAL
+    ========================================= */
+
+        .ocupacional-card {
+            height: 100%;
+
+            padding: 30px;
+
+            background: white;
+
+            border-radius: 15px;
+
+            box-shadow: var(--sombra);
+
+            border-top: 4px solid var(--dorado);
+        }
+
+        .ocupacional-card h3 {
+            color: var(--azul-principal);
+
+            font-size: 1.15rem;
+
+            margin-bottom: 15px;
+        }
+
+        .ocupacional-card p {
+            color: #666;
+
+            line-height: 1.7;
+
+            margin-bottom: 0;
+        }
+
+        /* =========================================
+       CTA FINAL
+    ========================================= */
+
+        .programa-cta {
+            padding: 90px 20px;
+
+            background:
+                linear-gradient(135deg,
+                    var(--azul-principal),
+                    var(--azul-secundario));
+
+            text-align: center;
+
+            color: white;
+        }
+
+        .programa-cta h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+        .programa-cta p {
+            max-width: 750px;
+
+            margin: 0 auto 30px;
+
+            color: rgba(255, 255, 255, 0.9);
+
+            line-height: 1.7;
+        }
+
+        /* =========================================
+       BOTÓN VOLVER
+    ========================================= */
+
+        .volver-programas {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-bottom: 30px;
+
+            color: var(--azul-secundario);
+
+            text-decoration: none;
+
+            font-weight: 600;
+        }
+
+        .volver-programas:hover {
+            color: var(--dorado);
+        }
+
+        /* =========================================
+       RESPONSIVE - TABLET
+    ========================================= */
+
+        @media (max-width: 992px) {
+
+            .programa-hero {
+                min-height: 620px;
+
+                background-size: auto 105%;
+
+                background-position: right center;
+            }
+
+            .programa-hero::before {
+                background:
+                    linear-gradient(90deg,
+                        var(--azul-principal) 0%,
+                        rgba(18, 59, 102, 0.97) 32%,
+                        rgba(18, 59, 102, 0.75) 50%,
+                        rgba(18, 59, 102, 0.20) 72%,
+                        rgba(18, 59, 102, 0) 100%);
+            }
+
+            .programa-hero-content {
+                padding-left: 20px;
+            }
+
+            .programa-hero h1 {
+                max-width: 570px;
+            }
+
+            .programa-hero p {
+                max-width: 530px;
+            }
+        }
+
+        /* =========================================
+       RESPONSIVE - CELULAR
+    ========================================= */
+
+        @media (max-width: 768px) {
+
+            .programa-hero {
+                min-height: 680px;
+
+                padding: 120px 20px 70px;
+
+                /*
+               La imagen baja para que
+               el texto quede arriba
+            */
+                background-size: auto 75%;
+
+                background-position: center bottom;
+            }
+
+            .programa-hero::before {
+                background:
+                    linear-gradient(180deg,
+                        rgba(18, 59, 102, 1) 0%,
+                        rgba(18, 59, 102, 0.97) 42%,
+                        rgba(18, 59, 102, 0.55) 70%,
+                        rgba(18, 59, 102, 0.10) 100%);
+            }
+
+            .programa-hero-content {
+                padding-left: 10px;
+
+                padding-right: 10px;
+
+                text-align: center;
+            }
+
+            .programa-hero-icon {
+                margin: 0 auto 20px;
+            }
+
+            .programa-hero h1 {
+                max-width: 100%;
+
+                font-size: clamp(2rem, 9vw, 3rem);
+
+                line-height: 1.1;
+
+                letter-spacing: -0.5px;
+            }
+
+            .programa-hero p {
+                max-width: 100%;
+
+                font-size: 0.95rem;
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+            .btn-programa {
+                width: 100%;
+
+                margin: 5px 0;
+            }
+
+            .btn-programa-secondary {
+                margin-left: 0;
+            }
+
+            .programa-section {
+                padding: 65px 0;
+            }
+
+            .perfil-box,
+            .requisitos-card {
+                padding: 30px 22px;
+            }
+
+            .semestre-title {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 8px;
+            }
+        }
+
+        /* =========================================
+       RESPONSIVE - CELULARES PEQUEÑOS
+    ========================================= */
+
+        @media (max-width: 480px) {
+
+            .programa-hero {
+                min-height: 650px;
+
+                padding-top: 105px;
+
+                background-size: auto 65%;
+            }
+
+            .programa-hero h1 {
+                font-size: 2rem;
+            }
+
+            .programa-hero p {
+                font-size: 0.9rem;
+
+                line-height: 1.6;
+            }
+
+            .programa-hero-icon {
+                width: 52px;
+
+                height: 52px;
+
+                font-size: 23px;
+            }
+
+            .btn-programa {
+                padding: 13px 20px;
+
+                font-size: 0.9rem;
+            }
+
+            .programa-section {
+                padding: 55px 0;
+            }
+
+            .plan-card {
+                padding: 25px 20px;
+            }
+
+            .competencia-card,
+            .ocupacional-card,
+            .horario-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body id="inicio">
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+
+        <div class="container-fluid">
+
+            <!-- LOGO -->
+
+            <a class="navbar-brand" href="Asociación.html"
+                aria-label="Inicio Instituto Técnico Asociación Escolar María Goretti">
+
+                <img src="logos/fondo.jpeg" alt="Logo del Instituto Técnico Asociación Escolar María Goretti"
+                    class="logo-escudo">
+
+                <span>
+                    <strong>Instituto Técnico</strong><br>
+                    Asociación Escolar María Goretti
+                </span>
+
+            </a>
+
+            <!-- BOTÓN RESPONSIVE -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- MENÚ -->
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+
+                            Institución
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="quienes-somos.html">
+                                    Quiénes somos
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="direccionamiento-institucional.html">
+                                    direccionamiento Institucional
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="equipo.html">
+                                    Equipo Institucional
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="santos-patronos.html">
+                                    Santos Patronos
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+
+                            Programas
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="asesor-comercial.html">
+                                    Técnico Laboral en Asesor Comercial
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Técnico Laboral en Primera Infancia
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Técnico Laboral en Auxiliar Administrativa
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+
+                            Estudiantes
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="documentos.html">
+                                    Documentos
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="calendario.html">
+                                    Calendario académico
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#noticias">
+                            Noticias
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contacto">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <header class="programa-hero">
+
+        <div class="programa-hero-content">
+
+            <div class="programa-hero-content">
+
+                <h1>
+                    Técnico Laboral en
+                    <span> Asesor Comercial</span>
+                </h1>
+
+                <p>
+                    Formación orientada al desarrollo de competencias comerciales,
+                    atención al cliente, ventas, negociación y gestión de procesos comerciales.
+                </p>
+
+                <div>
+                    <a href="#" class="btn-programa btn-programa-primary">
+                        <i class="fas fa-info-circle"></i>
+                        Conocer el programa
+                    </a>
+
+                    <a href="#" class="btn-programa btn-programa-secondary">
+                        <i class="fas fa-user-plus"></i>
+                        Solicitar información
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         INFORMACIÓN DEL PROGRAMA
+    ========================================= -->
+
+    <section class="programa-section" id="informacion">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="section-label-programa">
+                    INFORMACIÓN ACADÉMICA
+                </span>
+
+                <h2 class="programa-title">
+                    Conoce nuestro programa
+                </h2>
+
+                <div class="programa-line mx-auto"></div>
+
+                <p class="programa-text mx-auto" style="max-width: 750px;">
+
+                    Conoce las principales características del
+                    Técnico Laboral en Asesor Comercial.
+
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- DURACIÓN -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="info-programa-card">
+
+                        <div class="info-programa-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+
+                        <h3>Duración</h3>
+
+                        <p>
+                            2 semestres
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HORAS -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="info-programa-card">
+
+                        <div class="info-programa-icon">
+                            <i class="fas fa-hourglass-half"></i>
+                        </div>
+
+                        <h3>Total de horas</h3>
+
+                        <p>
+                            816 horas
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MODALIDAD -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="info-programa-card">
+
+                        <div class="info-programa-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+
+                        <h3>Modalidad</h3>
+
+                        <p>
+                            Presencial
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- JORNADAS -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="info-programa-card">
+
+                        <div class="info-programa-icon">
+                            <i class="fas fa-calendar-days"></i>
+                        </div>
+
+                        <h3>Jornadas</h3>
+
+                        <p>
+                            Mañana, tarde, noche y fin de semana
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         DESCRIPCIÓN
+    ========================================= -->
+
+    <section class="programa-section bg-light-custom">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <span class="section-label-programa">
+                        SOBRE EL PROGRAMA
+                    </span>
+
+                    <h2 class="programa-title">
+                        Formación orientada al mundo comercial
+                    </h2>
+
+                    <div class="programa-line"></div>
+
+                    <p class="programa-text">
+
+                        El Técnico Laboral en Asesor Comercial desarrolla
+                        competencias relacionadas con la promoción de
+                        ventas, identificación de clientes potenciales,
+                        atención y asesoría al cliente, negociación,
+                        seguimiento comercial y conocimiento del mercado.
+
+                    </p>
+
+                    <p class="programa-text">
+
+                        La formación integra competencias humanas,
+                        habilidades blandas, investigación de mercados,
+                        procesos de venta, marketing digital,
+                        transformación comercial y emprendimiento.
+
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="competencia-card">
+
+                        <h3>
+                            <i class="fas fa-chart-line"></i>
+                            Área de formación
+                        </h3>
+
+                        <p>
+
+                            Formación técnica relacionada con el área
+                            comercial, servicio al cliente, ventas,
+                            negociación, seguimiento de clientes,
+                            marketing digital y desarrollo empresarial.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PERFIL DE EGRESO
+    ========================================= -->
+
+    <section class="programa-section">
+
+        <div class="container">
+
+            <div class="perfil-box">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-5">
+
+                        <span class="section-label-programa">
+                            PERFIL DE EGRESO
+                        </span>
+
+                        <h2 class="programa-title">
+                            Funciones y competencias
+                        </h2>
+
+                        <p>
+
+                            El egresado del programa Técnico Laboral en
+                            Asesor Comercial estará preparado para
+                            desarrollar funciones relacionadas con los
+                            procesos de venta, atención, asesoría,
+                            negociación y seguimiento comercial.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-lg-7">
+
+                        <ul class="perfil-list">
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Promover las ventas con los clientes.
+                                </span>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Identificar y contactar clientes potenciales.
+                                </span>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>
+                                    Informar a los clientes sobre las ventajas y
+                                    utilización de las mercancías y servicios.
+                                </span>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>
+                                    Elaborar cotizaciones, convenir plazos de
+                                    crédito, garantías y fechas de entrega.
+                                </span>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>
+                                    Preparar o supervisar la elaboración de
+                                    contratos de venta.
+                                </span>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>
+                                    Consultar con los clientes después de la
+                                    venta, para resolver problemas existentes y
+                                    brindar asesoría.
+                                </span>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>
+                                    Revisar y actualizar información en cuanto a 
+                                    innovaciones de productos, competidores y 
+                                    condiciones de mercadeo. 
+                                </span>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Recuperar cartera vencida.</span>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Estar al día de las novedades del mercado.</span>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Ser un asesor activo.</span>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Mostrar una actitud proactiva.</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         COMPETENCIAS
+    ========================================= -->
+
+    <section class="programa-section bg-light-custom">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="section-label-programa">
+                    FORMACIÓN
+                </span>
+
+                <h2 class="programa-title">
+                    Competencias del programa
+                </h2>
+
+                <div class="programa-line mx-auto"></div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="competencia-card">
+
+                        <h3>
+                            <i class="fas fa-magnifying-glass"></i>
+                            Investigación de mercados
+                        </h3>
+
+                        <p>
+                            Investigación de Mercados y Pensamiento Empresarial
+                            para comprender segmentos objetivo y condiciones
+                            del mercado.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="competencia-card">
+
+                        <h3>
+                            <i class="fas fa-user-plus"></i>
+                            Prospectación
+                        </h3>
+
+                        <p>
+                            Identificación y contacto de clientes de acuerdo
+                            con segmentos objetivo y estrategia comercial.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="competencia-card">
+
+                        <h3>
+                            <i class="fas fa-headset"></i>
+                            Atención al cliente
+                        </h3>
+
+                        <p>
+                            Atención de clientes de acuerdo con procedimientos
+                            y normativa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="competencia-card">
+
+                        <h3>
+                            <i class="fas fa-cart-shopping"></i>
+                            Procesos de venta
+                        </h3>
+
+                        <p>
+                            Venta de productos y servicios de acuerdo con las
+                            necesidades del cliente.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="competencia-card">
+
+                        <h3>
+                            <i class="fas fa-handshake"></i>
+                            Negociación
+                        </h3>
+
+                        <p>
+                            Negociación de portafolios de acuerdo con la
+                            categoría de producto y servicio.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="competencia-card">
+
+                        <h3>
+                            <i class="fas fa-chart-line"></i>
+                            Seguimiento comercial
+                        </h3>
+
+                        <p>
+                            Monitoreo de clientes según metodologías de
+                            evaluación y seguimiento.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="competencia-card">
+
+                        <h3>
+                            <i class="fas fa-laptop"></i>
+                            Marketing digital
+                        </h3>
+
+                        <p>
+                            Desarrollo de competencias relacionadas con
+                            Marketing Digital y Transformación Comercial.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="competencia-card">
+
+                        <h3>
+                            <i class="fas fa-lightbulb"></i>
+                            Emprendimiento
+                        </h3>
+
+                        <p>
+                            Desarrollo de competencias de emprendimiento
+                            comercial y desarrollo empresarial.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="competencia-card">
+
+                        <h3>
+                            <i class="fas fa-comments"></i>
+                            Habilidades humanas
+                        </h3>
+
+                        <p>
+                            Formación en competencias institucionales,
+                            humanización y habilidades blandas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PLAN DE ESTUDIOS
+    ========================================= -->
+
+    <section class="programa-section">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <div class="col-lg-5">
+
+                    <span class="section-label-programa">
+                        FORMACIÓN ACADÉMICA
+                    </span>
+
+                    <h2 class="programa-title">
+                        Plan de estudios
+                    </h2>
+
+                    <div class="programa-line"></div>
+
+                    <p class="programa-text">
+
+                        El programa está organizado en dos semestres,
+                        con una formación progresiva en competencias
+                        humanas, comerciales y empresariales.
+
+                    </p>
+
+                    <p class="programa-text">
+
+                        La intensidad total del programa es de
+                        <strong>816 horas</strong>.
+
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <div class="plan-card">
+
+                        <!-- SEMESTRE I -->
+
+                        <div class="semestre-title">
+
+                            <span>Semestre I</span>
+
+                            <span class="horas-semestre">
+                                384 horas
+                            </span>
+
+                        </div>
+
+
+                        <div class="plan-item">
+
+                            <div class="plan-number">
+                                1
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Competencias Institucionales y Humanización
+                                </h4>
+
+                                <p>
+                                    48 horas
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="plan-item">
+
+                            <div class="plan-number">
+                                2
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Habilidades Blandas
+                                </h4>
+
+                                <p>
+                                    48 horas
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="plan-item">
+
+                            <div class="plan-number">
+                                3
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Investigación de Mercados y Pensamiento Empresarial
+                                </h4>
+
+                                <p>
+                                    96 horas
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="plan-item">
+
+                            <div class="plan-number">
+                                4
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Prospectar clientes de acuerdo con segmentos
+                                    objetivo y estrategia comercial
+                                </h4>
+
+                                <p>
+                                    96 horas
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="plan-item">
+
+                            <div class="plan-number">
+                                5
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Atender clientes según procedimiento y normativa
+                                </h4>
+
+                                <p>
+                                    96 horas
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SEMESTRE II -->
+
+                        <div class="semestre-title">
+
+                            <span>Semestre II</span>
+
+                            <span class="horas-semestre">
+                                432 horas
+                            </span>
+
+                        </div>
+
+
+                        <div class="plan-item">
+
+                            <div class="plan-number">
+                                6
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Vender productos y servicios según necesidades
+                                    del cliente
+                                </h4>
+
+                                <p>
+                                    96 horas
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="plan-item">
+
+                            <div class="plan-number">
+                                7
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Negociar portafolio de acuerdo con categoría
+                                    de producto y servicio
+                                </h4>
+
+                                <p>
+                                    96 horas
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="plan-item">
+
+                            <div class="plan-number">
+                                8
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Monitorear clientes según metodologías de
+                                    evaluación y seguimiento
+                                </h4>
+
+                                <p>
+                                    96 horas
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="plan-item">
+
+                            <div class="plan-number">
+                                9
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Marketing Digital y Transformación Comercial
+                                </h4>
+
+                                <p>
+                                    96 horas
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="plan-item">
+
+                            <div class="plan-number">
+                                10
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Emprendimiento Comercial
+                                </h4>
+
+                                <p>
+                                    48 horas
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="total-programa">
+
+                            <i class="fas fa-graduation-cap me-2"></i>
+
+                            Total del programa: 816 horas
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         RESULTADOS ESPERADOS
+    ========================================= -->
+
+    <section class="programa-section bg-light-custom">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="section-label-programa">
+                    RESULTADOS ESPERADOS
+                </span>
+
+                <h2 class="programa-title">
+                    Formación por etapas
+                </h2>
+
+                <div class="programa-line mx-auto"></div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+
+                    <div class="ocupacional-card">
+
+                        <h3>
+                            <i class="fas fa-seedling"></i>
+                            Semestre I
+                        </h3>
+
+                        <p>
+
+                            El estudiante desarrolla competencias de los
+                            <strong>Fundamentos Humanos y Comerciales.</strong>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="ocupacional-card">
+
+                        <h3>
+                            <i class="fas fa-chart-column"></i>
+                            Semestre II
+                        </h3>
+
+                        <p>
+
+                            El estudiante desarrolla competencias de
+                            <strong>gestión comercial y desarrollo empresarial.</strong>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         JORNADAS
+    ========================================= -->
+
+    <section class="programa-section">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="section-label-programa">
+                    HORARIOS
+                </span>
+
+                <h2 class="programa-title">
+                    Jornadas disponibles
+                </h2>
+
+                <div class="programa-line mx-auto"></div>
+
+                <p class="programa-text mx-auto" style="max-width: 750px;">
+
+                    El programa se desarrolla bajo modalidad presencial
+                    y cuenta con diferentes jornadas de formación.
+
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- MAÑANA -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="horario-card">
+
+                        <h3>
+                            <i class="fas fa-sun"></i>
+                            Jornada mañana
+                        </h3>
+
+                        <p>
+                            <strong>Lunes a jueves</strong>
+                        </p>
+
+                        <p>
+                            8:00 a. m. a 12:00 m.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TARDE -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="horario-card">
+
+                        <h3>
+                            <i class="fas fa-cloud-sun"></i>
+                            Jornada tarde
+                        </h3>
+
+                        <p>
+                            <strong>Lunes a jueves</strong>
+                        </p>
+
+                        <p>
+                            2:00 p. m. a 6:00 p. m.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NOCHE -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="horario-card">
+
+                        <h3>
+                            <i class="fas fa-moon"></i>
+                            Jornada noche
+                        </h3>
+
+                        <p>
+                            <strong>Lunes a jueves</strong>
+                        </p>
+
+                        <p>
+                            6:00 p. m. a 10:00 p. m.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FIN DE SEMANA -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="horario-card">
+
+                        <h3>
+                            <i class="fas fa-calendar-week"></i>
+                            Fin de semana
+                        </h3>
+
+                        <p>
+                            <strong>Viernes:</strong>
+                            4:00 p. m. a 10:00 p. m.
+                        </p>
+
+                        <p>
+                            <strong>Sábado:</strong>
+                            7:00 a. m. a 5:00 p. m.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MODALIDAD -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="horario-card">
+
+                        <h3>
+                            <i class="fas fa-building"></i>
+                            Modalidad
+                        </h3>
+
+                        <p>
+                            <strong>Presencial</strong>
+                        </p>
+
+                        <p>
+                            Formación desarrollada de manera presencial.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOTAL -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="horario-card">
+
+                        <h3>
+                            <i class="fas fa-clock"></i>
+                            Intensidad
+                        </h3>
+
+                        <p>
+                            <strong>816 horas</strong>
+                        </p>
+
+                        <p>
+                            Distribuidas en dos semestres.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PERFIL OCUPACIONAL
+    ========================================= -->
+
+    <section class="programa-section bg-light-custom">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="section-label-programa">
+                    CAMPO LABORAL
+                </span>
+
+                <h2 class="programa-title">
+                    Perfil ocupacional
+                </h2>
+
+                <div class="programa-line mx-auto"></div>
+
+                <p class="programa-text mx-auto" style="max-width: 800px;">
+
+                    Las funciones y competencias establecidas para el
+                    programa preparan al estudiante para desempeñarse
+                    en actividades relacionadas con asesoría comercial,
+                    ventas, atención y seguimiento de clientes.
+
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="ocupacional-card">
+
+                        <h3>
+                            <i class="fas fa-store"></i>
+                            Asesoría comercial
+                        </h3>
+
+                        <p>
+                            Promoción de ventas, orientación a clientes
+                            e información sobre productos y servicios.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="ocupacional-card">
+
+                        <h3>
+                            <i class="fas fa-users"></i>
+                            Atención y seguimiento
+                        </h3>
+
+                        <p>
+                            Contacto con clientes potenciales, atención
+                            posterior a la venta y asesoría para resolver
+                            situaciones relacionadas con el servicio.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="ocupacional-card">
+
+                        <h3>
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            Gestión comercial
+                        </h3>
+
+                        <p>
+                            Elaboración de cotizaciones, negociación de
+                            condiciones comerciales y seguimiento de
+                            procesos de venta.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="ocupacional-card">
+
+                        <h3>
+                            <i class="fas fa-file-contract"></i>
+                            Contratos de venta
+                        </h3>
+
+                        <p>
+                            Preparación o supervisión de la elaboración
+                            de contratos de venta.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="ocupacional-card">
+
+                        <h3>
+                            <i class="fas fa-money-check-dollar"></i>
+                            Cartera
+                        </h3>
+
+                        <p>
+                            Actividades relacionadas con la recuperación
+                            de cartera vencida.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="ocupacional-card">
+
+                        <h3>
+                            <i class="fas fa-chart-line"></i>
+                            Mercado
+                        </h3>
+
+                        <p>
+                            Seguimiento a novedades del mercado,
+                            innovaciones de productos, competidores y
+                            condiciones de mercadeo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         REQUISITOS
+    ========================================= -->
+
+    <section class="programa-section">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-5">
+
+                    <span class="section-label-programa">
+                        INGRESO
+                    </span>
+
+                    <h2 class="programa-title">
+                        Requisitos de ingreso
+                    </h2>
+
+                    <div class="programa-line"></div>
+
+                    <p class="programa-text">
+
+                        Los requisitos específicos de ingreso no se
+                        encuentran incluidos en la información
+                        suministrada para este programa.
+
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <div class="requisitos-card">
+
+                        <div class="requisito">
+
+                            <i class="fas fa-circle-info"></i>
+
+                            <p>
+                                Consulta directamente con la institución
+                                los requisitos académicos de ingreso.
+                            </p>
+
+                        </div>
+
+                        <div class="requisito">
+
+                            <i class="fas fa-file-circle-question"></i>
+
+                            <p>
+                                Consulta la documentación requerida
+                                para realizar el proceso de matrícula.
+                            </p>
+
+                        </div>
+
+                        <div class="requisito">
+
+                            <i class="fas fa-building"></i>
+
+                            <p>
+                                Para conocer los requisitos institucionales
+                                actualizados, comunícate con el Instituto.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         MATRÍCULA / CONTACTO
+    ========================================= -->
+
+    <section class="programa-cta" id="matricula">
+
+        <div class="container">
+
+            <h2>
+                ¿Quieres estudiar Asesor Comercial?
+            </h2>
+
+            <p>
+
+                Comunícate con el Instituto Técnico Asociación
+                Escolar María Goretti para recibir información
+                sobre el programa y el proceso de matrícula.
+
+            </p>
+
+            <a href="https://wa.me/573124556699?text=Hola,%20quiero%20recibir%20información%20sobre%20el%20Técnico%20Laboral%20en%20Asesor%20Comercial."
+                class="btn-programa btn-programa-primary" target="_blank" rel="noopener noreferrer">
+
+                <i class="fab fa-whatsapp"></i>
+
+                Solicitar información
+
+            </a>
+
+            <a href="index.html#programas" class="btn-programa btn-programa-secondary">
+
+                <i class="fas fa-arrow-left"></i>
+
+                Volver a programas
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer" id="contacto">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- INFORMACIÓN -->
+
+                <div class="col-lg-4">
+
+                    <h3 class="footer-title">
+
+                        <img src="logos/fondo.jpeg" alt="Logo del Instituto Técnico Asociación Escolar María Goretti"
+                            class="footer-logo">
+
+                        <span class="footer-instituto">
+
+                            <strong>Instituto Técnico</strong><br>
+
+                            Asociación Escolar María Goretti
+
+                        </span>
+
+                    </h3>
+
+
+                    <p class="footer-text">
+
+                        Institución orientada a la formación técnica,
+                        académica y humana, promoviendo el desarrollo
+                        de competencias para la construcción de
+                        nuevas oportunidades.
+
+                    </p>
+
+
+                    <div class="social-icons">
+
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+
+                            <i class="fab fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+
+                            <i class="fab fa-youtube"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACTO -->
+
+                <div class="col-lg-4">
+
+                    <h4>
+                        Contactos
+                    </h4>
+
+                    <div class="contact-info">
+
+                        <p>
+
+                            <i class="fas fa-map-marker-alt"></i>
+
+                            <span>
+                                Pasto, Nariño, Colombia
+                            </span>
+
+                        </p>
+
+                        <p>
+
+                            <i class="fas fa-phone"></i>
+
+                            <span>
+                                Teléfono: 314 701 01 18
+                            </span>
+
+                        </p>
+
+                        <p>
+
+                            <i class="fas fa-envelope"></i>
+
+                            <span>
+                                Correo: aemg@grupoaemg.org
+                            </span>
+
+                        </p>
+
+                        <p>
+
+                            <i class="fas fa-clock"></i>
+
+                            <span>
+                                Horarios de atención:
+                                De 7:00 a. m. a 6:00 p. m.
+                            </span>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ENLACES RÁPIDOS -->
+
+                <div class="col-lg-4">
+
+                    <h4>
+                        Enlaces rápidos
+                    </h4>
+
+                    <div class="row">
+
+                        <div class="col-6">
+
+                            <ul class="footer-links">
+
+                                <li>
+                                    <a href="Asociación.html">
+                                        <i class="fas fa-home"></i>
+                                        Inicio
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="direccionamiento-institucional.html">
+                                        <i class="fas fa-bullseye"></i>
+                                        Direccionamiento
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="index.html#programas">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        Programas
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#matricula">
+                                        <i class="fas fa-user-plus"></i>
+                                        Matrícula
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                        <div class="col-6">
+
+                            <ul class="footer-links">
+
+                                <li>
+                                    <a href="documentos.html">
+                                        <i class="fas fa-file-alt"></i>
+                                        Documentos
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="calendario.html">
+                                        <i class="fas fa-calendar"></i>
+                                        Calendario
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="index.html#noticias">
+                                        <i class="fas fa-newspaper"></i>
+                                        Noticias
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#contacto">
+                                        <i class="fas fa-envelope"></i>
+                                        Contacto
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DIVISOR -->
+
+            <hr class="footer-divider">
+
+
+            <!-- COPYRIGHT -->
+
+            <p class="copyright">
+
+                © 2026 Instituto Técnico Asociación Escolar María Goretti.
+                Todos los derechos reservados.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         BOTÓN WHATSAPP
+    ========================================= -->
+
+    <a href="https://wa.me/573124556699?text=Hola,%20quiero%20recibir%20información%20sobre%20el%20Técnico%20Laboral%20en%20Asesor%20Comercial."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"
+        title="Contáctanos por WhatsApp">
+
+        <i class="fab fa-whatsapp"></i>
+
+    </a>
+
+
+    <!-- =========================================
+         BOTÓN VOLVER ARRIBA
+    ========================================= -->
+
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+
+        <i class="fas fa-arrow-up"></i>
+
+    </button>
+
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- JAVASCRIPT DEL SITIO -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+```

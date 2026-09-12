@@ -1,0 +1,3833 @@
+/* =========================================================
+   STYLE.CSS
+   Instituto Técnico
+   Asociación Escolar María Goretti
+========================================================= */
+
+
+/* =========================================================
+   1. VARIABLES
+========================================================= */
+
+:root {
+  --primary-red: #C62828;
+  --primary-red-dark: #991B1B;
+  --primary-red-light: #EF5350;
+
+  --primary-blue: #173B7A;
+  --primary-blue-dark: #102B5C;
+  --primary-blue-light: #315DA8;
+
+  --gold: #D9A441;
+
+  --text-dark: #1F2937;
+  --text-gray: #64748B;
+
+  --white: #FFFFFF;
+
+  --background: #F7F9FC;
+  --background-soft: #EEF3F8;
+
+  --border: #E2E8F0;
+
+  --shadow-sm: 0 8px 25px rgba(15, 23, 42, .07);
+  --shadow-md: 0 18px 45px rgba(15, 23, 42, .12);
+  --shadow-lg: 0 25px 70px rgba(15, 23, 42, .18);
+
+  --radius-sm: 14px;
+  --radius-md: 22px;
+  --radius-lg: 32px;
+
+  --transition: all .3s ease;
+}
+
+
+/* =========================================================
+   2. CONFIGURACIÓN GENERAL
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-dark);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 64px 0;
+  position: relative;
+}
+
+
+/* =========================================================
+   3. NAVBAR
+========================================================= */
+
+#mainNavbar {
+  min-height: 114px;
+
+  background: #173B7A;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .10);
+
+  transition: var(--transition);
+
+  padding: 10px 0;
+
+  z-index: 1050;
+}
+
+#mainNavbar.navbar-scrolled {
+  min-height: 82px;
+
+  background: rgba(255, 255, 255, .98);
+}
+
+#mainNavbar.navbar-scrolled .nav-link,
+#mainNavbar.navbar-scrolled .navbar-brand {
+  color: var(--primary-blue);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--white);
+
+  max-width: 420px;
+}
+
+.logo-escudo {
+  width: 78px !important;
+  height: 78px !important;
+
+  max-width: 78px !important;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+
+  background: var(--white);
+
+  padding: 3px;
+
+  flex-shrink: 0;
+}
+
+.brand-text {
+  font-size: 1.05rem;
+
+  line-height: 1.25;
+}
+
+.brand-text strong {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 1.45rem;
+
+  font-weight: 800;
+}
+
+.navbar-nav {
+  gap: 4px;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, .94);
+
+  font-weight: 600;
+
+  font-size: .92rem;
+
+  padding: 11px 14px !important;
+
+  border-radius: 9px;
+
+  transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--white);
+
+  background: rgba(255, 255, 255, .10);
+}
+
+.dropdown-menu {
+  border: 0;
+
+  border-radius: var(--radius-sm);
+
+  box-shadow: var(--shadow-md);
+
+  padding: 10px;
+
+  margin-top: 10px;
+}
+
+.dropdown-item {
+  border-radius: 8px;
+
+  padding: 10px 14px;
+
+  font-weight: 500;
+
+  color: var(--text-dark);
+}
+
+.dropdown-item:hover {
+  background: #F1F5F9;
+
+  color: var(--primary-red);
+}
+
+
+/* =========================================================
+   4. HERO PRINCIPAL
+   PORTADA DE INICIO
+========================================================= */
+
+.instituto-hero {
+
+  /*
+     Altura del hero.
+     Se adapta a la pantalla dejando
+     espacio suficiente debajo del navbar.
+  */
+  min-height: calc(100vh - 114px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 90px 20px 100px;
+
+  background-image: url("../portada.png");
+
+  background-position: center center;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   OSCURECIMIENTO DE LA PORTADA
+========================================================= */
+
+.instituto-hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(180deg,
+      rgba(0, 0, 0, .18) 0%,
+      rgba(0, 0, 0, .34) 45%,
+      rgba(0, 0, 0, .48) 100%);
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   CONTENIDO DEL HERO
+========================================================= */
+
+.instituto-hero-content {
+
+  width: 100%;
+
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  /*
+     Baja todo el bloque ligeramente.
+  */
+  transform: translateY(28px);
+}
+
+.instituto-hero-content .container {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   TÍTULO PRINCIPAL
+========================================================= */
+
+.instituto-hero h1 {
+
+  color: var(--white);
+
+  font-size: clamp(3.2rem, 5.7vw, 5.5rem);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  text-shadow:
+    0 4px 18px rgba(0, 0, 0, .65),
+    0 2px 4px rgba(0, 0, 0, .35);
+}
+
+
+/* =========================================================
+   SUBTÍTULO
+========================================================= */
+
+.instituto-hero h1 span {
+
+  display: block;
+
+  color: var(--white);
+
+  font-size: .52em;
+
+  font-weight: 700;
+
+  margin-top: 30px;
+
+  line-height: 1.25;
+
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, .65);
+}
+
+
+/* =========================================================
+   LEMA INSTITUCIONAL
+========================================================= */
+
+.hero-lema {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 38px auto 45px;
+
+  padding: 0 10px;
+
+  color: #FFFFFF;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+
+  font-weight: 600;
+
+  font-style: italic;
+
+  letter-spacing: .3px;
+
+  line-height: 1.5;
+
+  text-align: center;
+
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, .75),
+    0 1px 3px rgba(0, 0, 0, .5);
+}
+
+
+/* Línea izquierda */
+
+.hero-lema::before {
+
+  content: "";
+
+  width: 55px;
+
+  height: 2px;
+
+  flex-shrink: 0;
+
+  background: rgba(255, 255, 255, .90);
+
+  border-radius: 50px;
+
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .35);
+}
+
+
+/* Línea derecha */
+
+.hero-lema::after {
+
+  content: "";
+
+  width: 55px;
+
+  height: 2px;
+
+  flex-shrink: 0;
+
+  background: rgba(255, 255, 255, .90);
+
+  border-radius: 50px;
+
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .35);
+}
+
+
+/* =========================================================
+   5. BOTONES DEL HERO
+========================================================= */
+
+.hero-buttons {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 0;
+}
+
+.btn-hero {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  min-width: 280px;
+
+  padding: 16px 26px;
+
+  border-radius: 12px;
+
+  font-weight: 700;
+
+  font-size: 1rem;
+
+  text-align: center;
+
+  transition: var(--transition);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .18);
+}
+
+.btn-hero-primary {
+
+  background: var(--primary-red);
+
+  border: 2px solid var(--white);
+
+  color: var(--white);
+}
+
+.btn-hero-primary:hover {
+
+  background: var(--primary-red-dark);
+
+  color: var(--white);
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+}
+
+.btn-hero-secondary {
+
+  border: 2px solid rgba(255, 255, 255, .9);
+
+  color: var(--white);
+
+  background: rgba(0, 0, 0, .20);
+
+  backdrop-filter: blur(5px);
+}
+
+.btn-hero-secondary:hover {
+
+  background: var(--white);
+
+  color: var(--primary-blue);
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+}
+
+
+/* =========================================================
+   6. HERO DE PÁGINAS INTERNAS
+========================================================= */
+
+.page-hero {
+
+  min-height: 500px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+
+  padding: 140px 0 80px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(135deg,
+      rgba(23, 59, 122, .97),
+      rgba(16, 43, 92, .94));
+}
+
+.page-hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  color: var(--white);
+}
+
+.hero-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 8px 16px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(255, 255, 255, .25);
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, .10);
+
+  color: var(--white);
+
+  font-size: .75rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.page-hero h1 {
+
+  color: var(--white);
+
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+
+  text-shadow: 0 3px 15px rgba(0, 0, 0, .25);
+}
+
+.page-hero p {
+
+  max-width: 750px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, .82);
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   7. ENCABEZADOS DE SECCIÓN
+========================================================= */
+
+.section-heading {
+
+  text-align: center;
+
+  max-width: 800px;
+
+  margin: 0 auto 55px;
+}
+
+.section-label {
+
+  display: inline-block;
+
+  color: var(--primary-red);
+
+  font-size: .76rem;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+}
+
+.section-heading h2,
+.section-title {
+
+  color: var(--primary-blue);
+
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+
+  font-weight: 800;
+
+  margin-bottom: 16px;
+}
+
+.section-heading p {
+
+  color: var(--text-gray);
+
+  line-height: 1.8;
+
+  font-size: 1rem;
+}
+
+.section-line {
+
+  width: 65px;
+
+  height: 4px;
+
+  background: var(--primary-red);
+
+  border-radius: 50px;
+
+  margin: 0 auto 22px;
+}
+
+
+/* =========================================================
+   8. DIRECCIONAMIENTO INSTITUCIONAL
+========================================================= */
+
+.presentacion {
+
+  background: var(--white);
+}
+
+.directional-intro {
+
+  max-width: 850px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.directional-intro p {
+
+  color: var(--text-gray);
+
+  line-height: 1.8;
+
+  font-size: 1rem;
+
+  margin: 0;
+}
+
+.directional-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   9. TARJETAS MISIÓN, VISIÓN Y FILOSOFÍA
+========================================================= */
+
+.directional-card {
+
+  position: relative;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 35px 30px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+
+  overflow: hidden;
+
+  transition: var(--transition);
+}
+
+.directional-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 5px;
+
+  background: linear-gradient(90deg,
+      var(--primary-red),
+      var(--primary-blue));
+}
+
+.directional-card:hover {
+
+  transform: translateY(-7px);
+
+  box-shadow: var(--shadow-md);
+
+  border-color: rgba(198, 40, 40, .20);
+}
+
+.directional-card-header {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 22px;
+}
+
+.directional-card .info-card-icon {
+
+  width: 58px;
+
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 16px;
+
+  background: #FFF1F1;
+
+  color: var(--primary-red);
+
+  font-size: 1.35rem;
+}
+
+.directional-card-label {
+
+  color: var(--primary-red);
+
+  font-size: .70rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  line-height: 1.4;
+}
+
+.directional-card h3 {
+
+  color: var(--primary-blue);
+
+  font-size: 1.45rem;
+
+  font-weight: 800;
+
+  line-height: 1.3;
+
+  margin-bottom: 15px;
+}
+
+.directional-card-line {
+
+  width: 50px;
+
+  height: 4px;
+
+  background: var(--primary-red);
+
+  border-radius: 50px;
+
+  margin-bottom: 20px;
+}
+
+.directional-card p {
+
+  color: var(--text-gray);
+
+  font-size: .94rem;
+
+  line-height: 1.8;
+
+  text-align: justify;
+
+  margin: 0;
+}
+
+.directional-card p strong {
+
+  color: var(--primary-blue);
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   10. PRINCIPIOS INSTITUCIONALES
+========================================================= */
+
+.directional-principles {
+
+  background: var(--background);
+}
+
+.principios-visual {
+
+  height: 100%;
+
+  min-height: 100%;
+
+  padding: 45px 35px;
+
+  border-radius: var(--radius-lg);
+
+  background:
+    linear-gradient(145deg,
+      var(--primary-blue),
+      var(--primary-blue-dark));
+
+  color: var(--white);
+
+  box-shadow: var(--shadow-md);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.principios-visual .section-label {
+
+  color: var(--gold);
+}
+
+.principios-visual h2 {
+
+  color: var(--white);
+
+  font-size: clamp(2rem, 3vw, 2.8rem);
+
+  font-weight: 800;
+
+  margin-bottom: 18px;
+}
+
+.principios-visual p {
+
+  color: rgba(255, 255, 255, .82);
+
+  line-height: 1.8;
+}
+
+.principios-mascota {
+
+  width: 72px;
+
+  height: 72px;
+
+  display: grid;
+
+  place-items: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, .12);
+
+  color: var(--gold);
+
+  font-size: 1.8rem;
+}
+
+.principios-frase {
+
+  margin-top: 25px;
+
+  padding: 20px;
+
+  border-left: 4px solid var(--gold);
+
+  background: rgba(255, 255, 255, .08);
+
+  border-radius: 0 12px 12px 0;
+
+  color: rgba(255, 255, 255, .9);
+
+  line-height: 1.7;
+
+  font-size: .92rem;
+}
+
+
+/* =========================================================
+   11. GRID DE PRINCIPIOS
+========================================================= */
+
+.principios-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+/* La séptima tarjeta (impar) ocupa el ancho completo para que
+   el grid quede balanceado en lugar de dejar un hueco vacío */
+.principios-grid .principio-card:last-child {
+
+  grid-column: 1 / -1;
+}
+
+.principios-grid .principio-card:last-child p {
+
+  max-width: 640px;
+}
+
+.principio-card {
+
+  height: 100%;
+
+  padding: 25px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-sm);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition);
+}
+
+.principio-card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.principio-icon {
+
+  width: 50px;
+
+  height: 50px;
+
+  display: grid;
+
+  place-items: center;
+
+  margin-bottom: 16px;
+
+  border-radius: 14px;
+
+  background: #EEF3FF;
+
+  color: var(--primary-blue);
+
+  font-size: 1.2rem;
+}
+
+.principio-card h3 {
+
+  color: var(--primary-blue);
+
+  font-size: 1rem;
+
+  font-weight: 800;
+
+  line-height: 1.35;
+
+  margin-bottom: 10px;
+}
+
+.principio-card p {
+
+  color: var(--text-gray);
+
+  font-size: .86rem;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   12. PROGRAMAS
+========================================================= */
+
+.programas {
+
+  background: var(--white);
+}
+
+.programas-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.programa-card {
+
+  border-radius: var(--radius-md);
+
+  padding: 35px 30px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition);
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.programa-card:hover {
+
+  transform: translateY(-9px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.programa-icon {
+
+  width: 70px;
+
+  height: 70px;
+
+  border-radius: 20px;
+
+  display: grid;
+
+  place-items: center;
+
+  background:
+    linear-gradient(135deg,
+      var(--primary-blue),
+      var(--primary-blue-light));
+
+  color: var(--white);
+
+  font-size: 1.7rem;
+
+  margin-bottom: 25px;
+}
+
+.programa-card h3 {
+
+  color: var(--primary-blue);
+
+  font-size: 1.25rem;
+
+  font-weight: 800;
+
+  line-height: 1.45;
+
+  margin-bottom: 15px;
+}
+
+.programa-card p {
+
+  color: var(--text-gray);
+
+  line-height: 1.75;
+
+  flex-grow: 1;
+}
+
+.programa-link {
+
+  color: var(--primary-red);
+
+  font-weight: 800;
+
+  margin-top: 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  transition: var(--transition);
+}
+
+.programa-link:hover {
+
+  color: var(--primary-red-dark);
+}
+
+
+/* =========================================================
+   13. VENTAJAS
+========================================================= */
+
+.ventajas {
+
+  background: var(--background-soft);
+}
+
+.ventajas-content {
+
+  display: grid;
+
+  grid-template-columns: 1.2fr .8fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.ventajas-text h2 {
+
+  color: var(--primary-blue);
+
+  font-size: clamp(2rem, 3vw, 3rem);
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.ventajas-text>p {
+
+  color: var(--text-gray);
+
+  line-height: 1.8;
+
+  margin-bottom: 30px;
+}
+
+.ventajas-lista {
+
+  display: grid;
+
+  gap: 15px;
+}
+
+.ventaja-item {
+
+  display: flex;
+
+  gap: 16px;
+
+  align-items: center;
+
+  background: var(--white);
+
+  padding: 17px;
+
+  border-radius: 16px;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.ventaja-icon {
+
+  width: 52px;
+
+  height: 52px;
+
+  flex-shrink: 0;
+
+  border-radius: 15px;
+
+  display: grid;
+
+  place-items: center;
+
+  color: var(--primary-red);
+
+  background: #FFF1F1;
+
+  font-size: 1.25rem;
+}
+
+.ventaja-item h4 {
+
+  font-size: 1rem;
+
+  font-weight: 800;
+
+  color: var(--primary-blue);
+
+  margin: 0 0 4px;
+}
+
+.ventaja-item p {
+
+  margin: 0;
+
+  color: var(--text-gray);
+
+  font-size: .87rem;
+}
+
+.ventajas-destacado {
+
+  min-height: 450px;
+
+  border-radius: var(--radius-lg);
+
+  padding: 40px;
+
+  background:
+    linear-gradient(145deg,
+      rgba(198, 40, 40, .95),
+      rgba(153, 27, 27, .90)),
+    url("../imagenes/estudiantes.jpg") center/cover;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  color: var(--white);
+
+  box-shadow: var(--shadow-lg);
+}
+
+.ventajas-destacado-content {
+
+  background: rgba(255, 255, 255, .12);
+
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, .18);
+
+  padding: 30px;
+
+  border-radius: 20px;
+}
+
+.ventajas-destacado i {
+
+  font-size: 2rem;
+
+  color: #FFD166;
+
+  margin-bottom: 15px;
+}
+
+.ventajas-destacado h3 {
+
+  font-weight: 800;
+
+  margin-bottom: 12px;
+}
+
+.ventajas-destacado p {
+
+  color: rgba(255, 255, 255, .88);
+
+  margin: 0;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   14. NOTICIAS
+========================================================= */
+
+.noticias {
+
+  background: var(--white);
+}
+
+.noticias-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+.noticia-card {
+
+  border-radius: var(--radius-md);
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition);
+}
+
+.noticia-card:hover {
+
+  transform: translateY(-7px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.noticia-imagen {
+
+  height: 210px;
+
+  background:
+    linear-gradient(135deg,
+      var(--primary-blue),
+      var(--primary-blue-light));
+
+  display: grid;
+
+  place-items: center;
+
+  color: rgba(255, 255, 255, .9);
+
+  font-size: 4rem;
+}
+
+.noticia-card:nth-child(2) .noticia-imagen {
+
+  background:
+    linear-gradient(135deg,
+      var(--primary-red),
+      #EF5350);
+}
+
+.noticia-contenido {
+
+  padding: 28px;
+}
+
+.noticia-fecha {
+
+  display: inline-block;
+
+  color: var(--primary-red);
+
+  font-size: .76rem;
+
+  font-weight: 800;
+
+  letter-spacing: .8px;
+
+  margin-bottom: 12px;
+}
+
+.noticia-contenido h3 {
+
+  color: var(--primary-blue);
+
+  font-size: 1.3rem;
+
+  font-weight: 800;
+
+  margin-bottom: 12px;
+}
+
+.noticia-contenido p {
+
+  color: var(--text-gray);
+
+  line-height: 1.7;
+}
+
+.noticia-link {
+
+  color: var(--primary-red);
+
+  font-weight: 800;
+
+  display: inline-flex;
+
+  gap: 8px;
+
+  align-items: center;
+
+  margin-top: 10px;
+
+  transition: var(--transition);
+}
+
+.noticia-link:hover {
+
+  color: var(--primary-red-dark);
+}
+
+
+/* =========================================================
+   15. MATRÍCULA
+========================================================= */
+
+.matricula {
+
+  padding: 64px 0;
+
+  background: var(--white);
+
+  overflow: hidden;
+}
+
+.matricula-content {
+
+  text-align: center;
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 900px;
+
+  margin: auto;
+}
+
+.matricula-content h2 {
+
+  color: var(--primary-blue);
+
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  margin: 0 auto 25px;
+}
+
+.matricula-content p {
+
+  color: var(--text-gray);
+
+  max-width: 760px;
+
+  margin: 0 auto 34px;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+.btn-matricula {
+
+  display: inline-flex;
+
+  gap: 10px;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--primary-red);
+
+  border: 3px solid var(--primary-red);
+
+  outline: 2px solid rgba(198, 40, 40, .35);
+
+  outline-offset: 3px;
+
+  color: var(--white);
+
+  padding: 15px 25px;
+
+  border-radius: 10px;
+
+  font-weight: 800;
+
+  transition: var(--transition);
+}
+
+.btn-matricula i {
+
+  color: var(--white);
+}
+
+.btn-matricula:hover {
+
+  background: var(--primary-red-dark);
+
+  border-color: var(--primary-red-dark);
+
+  outline-color: rgba(153, 27, 27, .35);
+
+  color: var(--white);
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   16. FOOTER
+========================================================= */
+
+.footer {
+
+  background: #0D1F43;
+
+  color: var(--white);
+
+  padding: 75px 0 25px;
+}
+
+.footer-title {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 22px;
+}
+
+.footer-logo {
+
+  width: 62px;
+
+  height: 62px;
+
+  object-fit: contain;
+
+  background: var(--white);
+
+  border-radius: 50%;
+
+  padding: 3px;
+}
+
+.footer-instituto {
+
+  font-size: .9rem;
+
+  line-height: 1.4;
+}
+
+.footer-instituto strong {
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 1.1rem;
+}
+
+.footer h4 {
+
+  font-weight: 800;
+
+  margin-bottom: 22px;
+
+  font-size: 1.05rem;
+}
+
+.footer-text {
+
+  color: rgba(255, 255, 255, .68);
+
+  line-height: 1.8;
+
+  font-size: .9rem;
+}
+
+.social-icons {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+.social-icons a {
+
+  width: 40px;
+
+  height: 40px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--white);
+
+  background: rgba(255, 255, 255, .10);
+
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+
+  background: var(--primary-red);
+
+  transform: translateY(-3px);
+}
+
+.contact-info p {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  color: rgba(255, 255, 255, .68);
+
+  font-size: .9rem;
+
+  margin-bottom: 16px;
+
+  line-height: 1.6;
+}
+
+.contact-info i {
+
+  color: #FFD166;
+
+  margin-top: 4px;
+}
+
+.footer-links {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+.footer-links li {
+
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+
+  color: rgba(255, 255, 255, .68);
+
+  font-size: .9rem;
+
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+
+  color: var(--white);
+
+  padding-left: 4px;
+}
+
+.footer-links i {
+
+  color: #FFD166;
+
+  width: 20px;
+}
+
+.footer-divider {
+
+  border-color: rgba(255, 255, 255, .12);
+
+  margin: 45px 0 22px;
+}
+
+.copyright {
+
+  color: rgba(255, 255, 255, .55);
+
+  font-size: .82rem;
+
+  text-align: center;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   17. BOTONES FLOTANTES
+========================================================= */
+
+.whatsapp-float,
+.scroll-top {
+
+  position: fixed;
+
+  width: 52px;
+
+  height: 52px;
+
+  border-radius: 50%;
+
+  display: grid;
+
+  place-items: center;
+
+  color: var(--white);
+
+  z-index: 999;
+
+  box-shadow: var(--shadow-md);
+
+  transition: var(--transition);
+}
+
+.whatsapp-float {
+
+  right: 25px;
+
+  bottom: 25px;
+
+  background: #25D366;
+
+  font-size: 1.6rem;
+}
+
+.scroll-top {
+
+  right: 25px;
+
+  bottom: 90px;
+
+  background: var(--primary-red);
+
+  border: 0;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  cursor: pointer;
+}
+
+.scroll-top.show {
+
+  opacity: 1;
+
+  visibility: visible;
+}
+
+.whatsapp-float:hover,
+.scroll-top:hover {
+
+  color: var(--white);
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   ENTIDADES GORETTIANAS
+   SECCIÓN INDEPENDIENTE DEL FOOTER
+========================================================= */
+
+.entidades-footer-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 55px 0 70px;
+}
+
+
+/* CONTENEDOR BLANCO */
+
+.entidades-footer {
+  background: #ffffff;
+
+  border: 1px solid #e2e5ea;
+
+  border-top: 4px solid var(--primary-red);
+
+  border-radius: 0 0 22px 22px;
+
+  padding: 35px 45px 40px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+  text-align: center;
+}
+
+
+/* TÍTULO */
+
+.entidades-footer-title {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 30px;
+}
+
+
+.entidades-footer-title img {
+  width: 55px;
+
+  height: 55px;
+
+  object-fit: contain;
+}
+
+
+.entidades-footer-title h3 {
+  margin: 0;
+
+  color: var(--primary-blue);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 1.5rem;
+
+  font-weight: 800;
+}
+
+
+/* LOGOS */
+
+.entidades-footer-logos {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 42px;
+
+  flex-wrap: wrap;
+}
+
+
+/* CAJAS DE LOS LOGOS */
+
+.entidades-footer-logos a {
+  width: 115px;
+
+  height: 88px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 2px solid var(--primary-red);
+
+  border-radius: 16px;
+
+  padding: 10px;
+
+  transition: all 0.3s ease;
+
+  text-decoration: none;
+}
+
+
+/* IMÁGENES */
+
+.entidades-footer-logos a img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* HOVER */
+
+.entidades-footer-logos a:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 8px 20px rgba(198, 40, 40, 0.15);
+}
+
+
+.entidades-footer-logos a:hover img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  background: var(--primary-blue-dark);
+
+  color: #ffffff;
+
+  padding: 65px 0 25px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .entidades-footer-section {
+    padding: 40px 0 50px;
+  }
+
+  .entidades-footer {
+    padding: 30px 20px 35px;
+  }
+
+  .entidades-footer-logos {
+    gap: 20px;
+  }
+
+  .entidades-footer-logos a {
+    width: 105px;
+    height: 82px;
+  }
+
+  .entidades-footer-title h3 {
+    font-size: 1.3rem;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  .entidades-footer-section {
+    padding: 30px 0 40px;
+  }
+
+  .entidades-footer {
+    border-radius: 0 0 18px 18px;
+
+    padding: 25px 15px 30px;
+  }
+
+  .entidades-footer-title {
+    margin-bottom: 25px;
+  }
+
+  .entidades-footer-title img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .entidades-footer-title h3 {
+    font-size: 1.15rem;
+  }
+
+  .entidades-footer-logos {
+    gap: 15px;
+  }
+
+  .entidades-footer-logos a {
+    width: 90px;
+    height: 72px;
+    border-radius: 12px;
+  }
+
+}
+
+/* =========================================================
+   19. MISIÓN Y VISIÓN
+========================================================= */
+
+.mision-vision {
+
+  background: var(--background);
+}
+
+.mision-vision .section-heading {
+
+  margin-bottom: 50px;
+}
+
+.mision-vision .row {
+
+  align-items: stretch;
+}
+
+.mision-vision-card {
+
+  position: relative;
+
+  display: flex;
+
+  gap: 25px;
+
+  height: 100%;
+
+  padding: 35px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+
+  overflow: hidden;
+
+  transition: var(--transition);
+}
+
+.mision-vision-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 5px;
+
+  background: linear-gradient(90deg,
+      var(--primary-red),
+      var(--primary-blue));
+}
+
+.mision-vision-card:hover {
+
+  transform: translateY(-7px);
+
+  box-shadow: var(--shadow-md);
+
+  border-color: rgba(198, 40, 40, .20);
+}
+
+.mision-vision-icon {
+
+  flex: 0 0 65px;
+
+  width: 65px;
+
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #FFF1F1;
+
+  color: var(--primary-red);
+
+  border-radius: 16px;
+
+  font-size: 1.5rem;
+
+  transition: var(--transition);
+}
+
+.mision-vision-card:hover .mision-vision-icon {
+
+  background: var(--primary-red);
+
+  color: var(--white);
+
+  transform: scale(1.05);
+}
+
+.mision-vision-content {
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+.mision-vision-label {
+
+  display: inline-block;
+
+  color: var(--primary-red);
+
+  font-size: .78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 8px;
+}
+
+.mision-vision-content h3 {
+
+  color: var(--primary-blue);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 1.45rem;
+
+  font-weight: 800;
+
+  margin-bottom: 15px;
+}
+
+.mision-vision-content p {
+
+  color: var(--text-gray);
+
+  font-size: .94rem;
+
+  line-height: 1.8;
+
+  text-align: justify;
+
+  margin-bottom: 15px;
+}
+
+.mision-vision-content p:last-child {
+
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   20. SANTOS PATRONOS
+========================================================= */
+
+.santos-patronos-page {
+
+  background: var(--white);
+}
+
+
+/* =========================================================
+   HERO SANTOS
+========================================================= */
+
+.santos-hero {
+  background: #173B7A;
+  min-height: 430px;
+  padding: 140px 0 70px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+
+/* =========================================================
+   INTRODUCCIÓN
+========================================================= */
+
+.santos-introduccion {
+
+  padding: 95px 0 70px;
+
+  background: var(--white);
+}
+
+
+/* =========================================================
+   CONTENEDOR SANTOS
+========================================================= */
+
+.santos-patronos-section {
+
+  padding: 20px 0 120px;
+
+  background: var(--background);
+}
+
+.santos-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 80px;
+}
+
+
+/* =========================================================
+   SECCIÓN INDIVIDUAL
+========================================================= */
+
+.santo-seccion {
+
+  display: grid;
+
+  grid-template-columns: 42% 58%;
+
+  align-items: stretch;
+
+  background: var(--white);
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition);
+}
+
+.santo-seccion:hover {
+
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   IMAGEN
+========================================================= */
+
+.santo-imagen-container {
+
+  min-height: 540px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 45px;
+
+  background:
+    linear-gradient(145deg,
+      #EEF3F8,
+      #FFFFFF);
+
+  position: relative;
+}
+
+.santo-imagen-container::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+
+  height: 220px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(23, 59, 122, .08);
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.santo-imagen-container::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+
+  height: 280px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(198, 40, 40, .06);
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.santo-imagen-marco {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.santo-patrono-img {
+
+  width: auto;
+
+  max-width: 90%;
+
+  height: 440px;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+
+  transition: transform .5s ease;
+}
+
+.santo-seccion:hover .santo-patrono-img {
+
+  transform: scale(1.035);
+}
+
+
+/* =========================================================
+   CONTENIDO SANTOS
+========================================================= */
+
+.santo-content {
+
+  padding: 55px 60px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.santo-label {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  color: var(--primary-red);
+
+  font-size: .78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+
+  margin-bottom: 13px;
+}
+
+.santo-content h2 {
+
+  color: var(--primary-blue);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(2rem, 2.8vw, 2.5rem);
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  margin: 0 0 18px;
+}
+
+.santo-line {
+
+  width: 60px;
+
+  height: 4px;
+
+  background: var(--primary-red);
+
+  border-radius: 50px;
+
+  margin-bottom: 28px;
+}
+
+.santo-content>p {
+
+  color: var(--text-gray);
+
+  font-size: 1.08rem;
+
+  line-height: 1.9;
+
+  margin-bottom: 18px;
+
+  text-align: left;
+}
+
+.santo-frase {
+
+  display: flex;
+
+  gap: 18px;
+
+  align-items: flex-start;
+
+  margin-top: 12px;
+
+  margin-bottom: 25px;
+
+  padding: 20px 22px;
+
+  background: #F5F7FA;
+
+  border-left: 4px solid var(--primary-red);
+
+  border-radius: 0 12px 12px 0;
+}
+
+.santo-frase>i {
+
+  color: var(--primary-red);
+
+  font-size: 1.3rem;
+
+  margin-top: 4px;
+
+  flex-shrink: 0;
+}
+
+.santo-frase span {
+
+  display: block;
+
+  color: var(--primary-blue);
+
+  font-size: .76rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 7px;
+}
+
+.santo-frase p {
+
+  margin: 0;
+
+  color: var(--text-gray);
+
+  font-size: 1.05rem;
+
+  line-height: 1.7;
+
+  font-style: italic;
+}
+
+.santo-dato {
+
+  padding: 20px 22px;
+
+  background:
+    linear-gradient(135deg,
+      rgba(23, 59, 122, .05),
+      rgba(198, 40, 40, .035));
+
+  border: 1px solid rgba(23, 59, 122, .08);
+
+  border-radius: 12px;
+}
+
+.santo-dato strong {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--primary-blue);
+
+  font-size: .9rem;
+
+  font-weight: 800;
+
+  margin-bottom: 8px;
+}
+
+.santo-dato strong i {
+
+  color: var(--gold);
+}
+
+.santo-dato p {
+
+  color: var(--text-gray);
+
+  font-size: 1rem;
+
+  line-height: 1.75;
+
+  margin: 0;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   ALTERNANCIA
+========================================================= */
+
+.santo-derecha {
+
+  grid-template-columns: 58% 42%;
+}
+
+.santo-seccion:not(:last-child)::after {
+
+  content: none;
+}
+
+
+/* =========================================================
+   21. RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .santo-seccion {
+
+    grid-template-columns: 45% 55%;
+  }
+
+  .santo-derecha {
+
+    grid-template-columns: 55% 45%;
+  }
+
+  .santo-content {
+
+    padding: 45px;
+  }
+
+  .santo-imagen-container {
+
+    min-height: 500px;
+
+    padding: 35px;
+  }
+
+  .santo-patrono-img {
+
+    height: 390px;
+  }
+
+  .santo-content>p {
+
+    font-size: 1.03rem;
+
+    line-height: 1.85;
+  }
+
+
+  /* DIRECCIONAMIENTO — transición suave de 3 a 2 columnas */
+
+  .directional-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   22. RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  section {
+
+    padding: 75px 0;
+  }
+
+
+  /* NAVBAR */
+
+  .navbar-collapse {
+
+    background: var(--primary-blue);
+
+    margin-top: 12px;
+
+    padding: 15px;
+
+    border-radius: 14px;
+  }
+
+  .navbar-scrolled .navbar-collapse {
+
+    background: var(--white);
+  }
+
+
+  /* HERO */
+
+  .instituto-hero {
+
+    min-height: 700px;
+
+    padding: 90px 25px 80px;
+  }
+
+  .instituto-hero-content {
+
+    transform: translateY(20px);
+  }
+
+  .instituto-hero h1 {
+
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+  }
+
+  .instituto-hero h1 span {
+
+    margin-top: 28px;
+  }
+
+  .hero-lema {
+
+    margin-top: 32px;
+
+    margin-bottom: 38px;
+
+    font-size: 1.15rem;
+  }
+
+  .hero-buttons {
+
+    gap: 14px;
+  }
+
+
+  /* HERO PÁGINAS */
+
+  .page-hero {
+
+    min-height: 500px;
+
+    padding: 150px 0 80px;
+  }
+
+  .page-hero-content {
+
+    max-width: 750px;
+  }
+
+  .page-hero h1 {
+
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .page-hero p {
+
+    font-size: 1rem;
+  }
+
+
+  /* PROGRAMAS */
+
+  .programas-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  /* VENTAJAS */
+
+  .ventajas-content {
+
+    grid-template-columns: 1fr;
+  }
+
+  .ventajas-destacado {
+
+    min-height: 360px;
+  }
+
+
+  /* NOTICIAS */
+
+  .noticias-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  /* DIRECCIONAMIENTO */
+
+  .directional-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .directional-intro {
+
+    max-width: 750px;
+
+    margin-bottom: 45px;
+  }
+
+
+  /* PRINCIPIOS */
+
+  .principios-visual {
+
+    margin-bottom: 25px;
+  }
+
+  .principios-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   23. RESPONSIVE - TABLET PEQUEÑA
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .santos-introduccion {
+
+    padding: 80px 0 55px;
+  }
+
+  .santos-patronos-section {
+
+    padding: 10px 0 90px;
+  }
+
+  .santos-list {
+
+    gap: 50px;
+  }
+
+  .santo-seccion,
+  .santo-derecha {
+
+    grid-template-columns: 1fr;
+  }
+
+  .santo-imagen-container {
+
+    order: 1;
+
+    min-height: 420px;
+  }
+
+  .santo-content {
+
+    order: 2;
+
+    padding: 40px;
+  }
+
+  .santo-patrono-img {
+
+    height: 360px;
+  }
+
+  .santo-content h2 {
+
+    font-size: 2rem;
+  }
+
+  .santo-content>p {
+
+    font-size: 1.03rem;
+
+    line-height: 1.85;
+  }
+
+  .santo-frase p {
+
+    font-size: 1.02rem;
+  }
+
+  .santo-dato p {
+
+    font-size: .98rem;
+  }
+}
+
+
+/* =========================================================
+   24. RESPONSIVE - MÓVIL
+========================================================= */
+
+@media (max-width: 767px) {
+
+
+  /* =====================================================
+     NAVBAR
+  ===================================================== */
+
+  .logo-escudo {
+
+    width: 58px !important;
+
+    height: 58px !important;
+
+    max-width: 58px !important;
+  }
+
+  .brand-text {
+
+    font-size: .67rem;
+  }
+
+  .brand-text strong {
+
+    font-size: .86rem;
+  }
+
+
+  /* =====================================================
+     HERO PRINCIPAL
+  ===================================================== */
+
+  .instituto-hero {
+
+    min-height: 680px;
+
+    padding: 80px 20px 70px;
+  }
+
+  .instituto-hero-content {
+
+    transform: translateY(15px);
+  }
+
+  .instituto-hero h1 {
+
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
+
+    max-width: 100%;
+
+    line-height: 1.05;
+  }
+
+  .instituto-hero h1 span {
+
+    font-size: .52em;
+
+    margin-top: 25px;
+
+    line-height: 1.3;
+  }
+
+
+  /* LEMA */
+
+  .hero-lema {
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+    margin-bottom: 35px;
+
+    padding: 0 5px;
+
+    font-size: 1rem;
+
+    line-height: 1.5;
+  }
+
+  .hero-lema::before,
+  .hero-lema::after {
+
+    width: 25px;
+  }
+
+
+  /* BOTONES */
+
+  .hero-buttons {
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 0;
+  }
+
+  .btn-hero {
+
+    width: 100%;
+
+    max-width: 320px;
+
+    min-width: 0;
+
+    padding: 14px 20px;
+  }
+
+
+  /* =====================================================
+     HERO PÁGINAS
+  ===================================================== */
+
+  .page-hero {
+
+    min-height: 460px;
+
+    padding: 130px 20px 70px;
+  }
+
+  .page-hero h1 {
+
+    font-size: clamp(2.1rem, 9vw, 3rem);
+  }
+
+  .page-hero p {
+
+    font-size: .94rem;
+  }
+
+
+  /* =====================================================
+     DIRECCIONAMIENTO
+  ===================================================== */
+
+  .directional-card {
+
+    padding: 30px 25px;
+  }
+
+  .directional-card-header {
+
+    align-items: flex-start;
+  }
+
+  .directional-card h3 {
+
+    font-size: 1.3rem;
+  }
+
+
+  /* =====================================================
+     PRINCIPIOS
+  ===================================================== */
+
+  .principios-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .principios-visual {
+
+    padding: 40px 25px;
+  }
+
+
+  /* =====================================================
+     ENCABEZADOS
+  ===================================================== */
+
+  .section-heading {
+
+    margin-bottom: 40px;
+  }
+
+
+  /* =====================================================
+     MISIÓN Y VISIÓN
+  ===================================================== */
+
+  .mision-vision-card {
+
+    flex-direction: column;
+
+    padding: 30px 25px;
+
+    gap: 20px;
+  }
+
+  .mision-vision-icon {
+
+    flex: 0 0 58px;
+
+    width: 58px;
+
+    height: 58px;
+  }
+
+  .mision-vision-content h3 {
+
+    font-size: 1.3rem;
+  }
+
+  .mision-vision-content p {
+
+    font-size: .9rem;
+
+    text-align: left;
+  }
+
+
+  /* =====================================================
+     ENTIDADES FOOTER
+  ===================================================== */
+
+  .entidades-footer {
+
+    margin: 20px 15px 10px;
+
+    padding: 18px 15px;
+  }
+
+  .entidades-footer-title img {
+
+    width: 40px !important;
+
+    height: 40px !important;
+  }
+
+  .entidades-footer-title h3 {
+
+    font-size: 1.1rem;
+  }
+
+  .entidades-footer-logos {
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+  }
+
+  .entidades-footer-logos a {
+
+    width: 60px;
+
+    height: 55px;
+
+    border-radius: 10px;
+  }
+
+  .entidades-footer-logos img {
+
+    width: 42px !important;
+
+    height: 42px !important;
+
+    max-width: 42px !important;
+
+    max-height: 42px !important;
+  }
+}
+
+
+/* =========================================================
+   25. RESPONSIVE - MÓVIL PEQUEÑO
+========================================================= */
+
+@media (max-width: 576px) {
+
+  .santos-introduccion {
+
+    padding: 65px 0 45px;
+  }
+
+  .santos-patronos-section {
+
+    padding: 5px 0 70px;
+  }
+
+  .santos-list {
+
+    gap: 35px;
+  }
+
+  .santo-seccion {
+
+    border-radius: 18px;
+  }
+
+  .santo-imagen-container {
+
+    min-height: 330px;
+
+    padding: 25px;
+  }
+
+  .santo-patrono-img {
+
+    height: 290px;
+
+    max-width: 88%;
+  }
+
+  .santo-content {
+
+    padding: 30px 25px;
+  }
+
+  .santo-label {
+
+    font-size: .72rem;
+  }
+
+  .santo-content h2 {
+
+    font-size: 1.8rem;
+
+    line-height: 1.25;
+  }
+
+  .santo-content>p {
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 17px;
+  }
+
+  .santo-frase {
+
+    padding: 17px;
+
+    gap: 13px;
+  }
+
+  .santo-frase p {
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+  }
+
+  .santo-dato {
+
+    padding: 17px;
+  }
+
+  .santo-dato strong {
+
+    font-size: .85rem;
+  }
+
+  .santo-dato p {
+
+    font-size: .98rem;
+
+    line-height: 1.75;
+  }
+
+
+  /* =====================================================
+     HERO MÓVIL PEQUEÑO
+  ===================================================== */
+
+  .instituto-hero {
+
+    min-height: 650px;
+
+    padding: 70px 18px 60px;
+  }
+
+  .instituto-hero-content {
+
+    transform: translateY(10px);
+  }
+
+  .instituto-hero h1 {
+
+    font-size: clamp(2.2rem, 12vw, 3rem);
+  }
+
+  .instituto-hero h1 span {
+
+    margin-top: 22px;
+  }
+
+  .hero-lema {
+
+    margin-top: 25px;
+
+    margin-bottom: 32px;
+
+    font-size: .96rem;
+  }
+
+  .hero-lema::before,
+  .hero-lema::after {
+
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   26. ACCESIBILIDAD
+========================================================= */
+
+:focus-visible {
+
+  outline: 3px solid rgba(49, 93, 168, .35);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   27. REDUCCIÓN DE MOVIMIENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+
+    transition: none !important;
+
+    animation: none !important;
+  }
+}
+
+/* =========================================================
+   28. COMPONENTES GLOBALES (no exclusivos de una página)
+========================================================= */
+
+/* El botón volver arriba conserva el rojo institucional */
+.scroll-top {
+  background: var(--primary-red) !important;
+}
+
+/* =========================================================
+   DIRECCIONAMIENTO INSTITUCIONAL
+   MEJORA EXCLUSIVA DEL COMPONENTE
+
+   Estas reglas afectan únicamente:
+   - Misión
+   - Visión
+   - Filosofía institucional
+   - Principios institucionales
+========================================================= */
+
+
+/* =========================================================
+   1. INTRODUCCIÓN DEL DIRECCIONAMIENTO
+========================================================= */
+
+.presentacion .directional-intro p {
+  max-width: 720px;
+  margin: 0 auto;
+
+  color: var(--text-gray);
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   2. GRID DE MISIÓN, VISIÓN Y FILOSOFÍA
+========================================================= */
+
+.presentacion .directional-grid {
+  gap: 28px;
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   3. TARJETAS DE IDENTIDAD INSTITUCIONAL
+========================================================= */
+
+.presentacion .directional-card {
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 34px 32px 30px;
+}
+
+
+/* =========================================================
+   ENCABEZADO DE LAS TARJETAS
+========================================================= */
+
+.presentacion .directional-card-header {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+
+.presentacion .directional-card-header>div:last-child {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.presentacion .directional-card h3 {
+  margin: 5px 0 0;
+
+  font-size: 1.32rem;
+}
+
+
+.presentacion .directional-card-line {
+  margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   CONTENIDO DE MISIÓN, VISIÓN Y FILOSOFÍA
+========================================================= */
+
+.presentacion .directional-card-content {
+  display: grid;
+  gap: 15px;
+}
+
+
+.presentacion .directional-card-content p {
+  margin: 0;
+
+  text-align: left;
+
+  font-size: 0.93rem;
+  line-height: 1.78;
+}
+
+
+/* =========================================================
+   BLOQUE DESTACADO DE CADA TARJETA
+
+   Este bloque permite resaltar una idea importante
+   sin recargar visualmente el contenido.
+========================================================= */
+
+.presentacion .directional-card-highlight {
+  margin-top: auto;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  padding: 16px 17px;
+
+  border: 1px solid rgba(23, 59, 122, 0.10);
+  border-radius: 14px;
+
+  background:
+    linear-gradient(135deg,
+      #F7F9FC,
+      #EEF3F8);
+
+  color: var(--primary-blue);
+
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+
+.presentacion .directional-card-highlight i {
+  flex-shrink: 0;
+
+  margin-top: 4px;
+
+  color: var(--primary-red);
+}
+
+
+/* =========================================================
+   4. PRINCIPIOS INSTITUCIONALES
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   ESTRUCTURA GENERAL
+--------------------------------------------------------- */
+
+.directional-principles .principios-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 0.8fr) minmax(0, 1.2fr);
+
+  gap: 30px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   5. BLOQUE VISUAL DE PRINCIPIOS
+========================================================= */
+
+.directional-principles .principios-visual {
+  position: relative;
+
+  min-height: 100%;
+
+  overflow: hidden;
+
+  padding: 48px 40px;
+
+  background:
+    linear-gradient(145deg,
+      var(--primary-blue),
+      var(--primary-blue-dark));
+}
+
+
+/* ---------------------------------------------------------
+   DECORACIÓN DE FONDO
+--------------------------------------------------------- */
+
+.directional-principles .principios-visual::after {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  right: -95px;
+  bottom: -95px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+
+/* Mantiene el contenido por encima de la decoración */
+
+.directional-principles .principios-visual>* {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ---------------------------------------------------------
+   ICONO PRINCIPAL
+--------------------------------------------------------- */
+
+.directional-principles .principios-mascota {
+  margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   FRASE DESTACADA
+========================================================= */
+
+.directional-principles .principios-frase {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  margin-top: 28px;
+}
+
+
+.directional-principles .principios-frase i {
+  flex-shrink: 0;
+
+  margin-top: 3px;
+
+  color: var(--gold);
+
+  font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   DECORACIÓN INFERIOR
+========================================================= */
+
+.principios-decoration {
+  display: flex;
+
+  gap: 8px;
+
+  margin-top: 30px;
+}
+
+
+.principios-decoration span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--gold);
+}
+
+
+.principios-decoration span:nth-child(2) {
+  opacity: 0.6;
+}
+
+
+.principios-decoration span:nth-child(3) {
+  opacity: 0.3;
+}
+
+
+/* =========================================================
+   6. CONTENIDO DE PRINCIPIOS
+========================================================= */
+
+.principios-content {
+  padding: 4px 0;
+}
+
+
+/* ---------------------------------------------------------
+   ENCABEZADO
+--------------------------------------------------------- */
+
+.principios-content-heading {
+  margin: 0 0 18px 4px;
+}
+
+
+.principios-content-heading span {
+  display: block;
+
+  color: var(--primary-red);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+
+.principios-content-heading p {
+  margin: 6px 0 0;
+
+  color: var(--text-gray);
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   7. GRID DE PRINCIPIOS
+========================================================= */
+
+.directional-principles .principios-grid {
+  gap: 16px;
+}
+
+
+/* El último principio ocupa todo el ancho */
+
+.directional-principles .principios-grid .principio-card:last-child {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   8. TARJETAS DE PRINCIPIOS
+========================================================= */
+
+.directional-principles .principio-card {
+  position: relative;
+
+  min-height: 145px;
+
+  overflow: hidden;
+
+  padding:
+    22px 20px 20px 72px;
+}
+
+
+.directional-principles .principio-card:hover {
+  border-color:
+    rgba(198, 40, 40, 0.20);
+}
+
+
+/* =========================================================
+   NUMERACIÓN DECORATIVA
+========================================================= */
+
+.directional-principles .principio-number {
+  position: absolute;
+
+  top: 14px;
+  right: 16px;
+
+  color:
+    rgba(23, 59, 122, 0.10);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 1.35rem;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   ICONOS DE LOS PRINCIPIOS
+========================================================= */
+
+.directional-principles .principio-icon {
+  position: absolute;
+
+  top: 23px;
+  left: 18px;
+
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0;
+
+  border-radius: 13px;
+
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   TEXTO DE LAS TARJETAS
+========================================================= */
+
+.directional-principles .principio-text h3 {
+  margin: 0 0 8px;
+
+  padding-right: 34px;
+
+  font-size: 0.94rem;
+  line-height: 1.3;
+}
+
+
+.directional-principles .principio-text p {
+  margin: 0;
+
+  font-size: 0.84rem;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   9. DISEÑO RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .directional-principles .principios-layout {
+    grid-template-columns: 1fr;
+  }
+
+
+  .directional-principles .principios-visual {
+    min-height: auto;
+  }
+
+}
+
+
+/* =========================================================
+   10. DISEÑO RESPONSIVE - MÓVIL
+========================================================= */
+
+@media (max-width: 767px) {
+
+  /* Tarjetas institucionales */
+
+  .presentacion .directional-card {
+    padding: 28px 23px;
+  }
+
+
+  .presentacion .directional-card-highlight {
+    margin-top: 20px;
+  }
+
+
+  /* Bloque principal */
+
+  .directional-principles .principios-visual {
+    padding: 38px 25px;
+  }
+
+
+  /* Principios en una columna */
+
+  .directional-principles .principios-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Tarjetas de principios */
+
+  .directional-principles .principio-card {
+    min-height: auto;
+
+    padding:
+      20px 18px 18px 68px;
+  }
+
+
+  /* Encabezado */
+
+  .principios-content-heading {
+    margin-left: 0;
+  }
+
+}

@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description"
+    content="Santos Patronos del Instituto Técnico Asociación Escolar María Goretti. Conoce la vida, valores y ejemplo de nuestros santos patronos." />
+
+  <meta name="keywords"
+    content="Santos Patronos, Instituto Técnico Asociación Escolar María Goretti, Santa María Goretti, San Francisco de Asís, Santa Clara de Asís, San Carlo Acutis" />
+
+  <meta name="author"
+    content="Instituto Técnico Asociación Escolar María Goretti" />
+
+  <title>
+    Santos Patronos | Instituto Técnico Asociación Escolar María Goretti
+  </title>
+
+
+  <!-- =========================================================
+       GOOGLE FONTS
+  ========================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+
+  <!-- =========================================================
+       BOOTSTRAP
+  ========================================================== -->
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet" />
+
+
+  <!-- =========================================================
+       FONT AWESOME
+  ========================================================== -->
+
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet" />
+
+
+  <!-- =========================================================
+       ESTILOS PROPIOS
+  ========================================================== -->
+
+  <link href="css/style.css" rel="stylesheet" />
+
+
+  <!-- =========================================================
+       ESTILOS ESPECÍFICOS DE SANTOS PATRONOS
+  ========================================================== -->
+
+  <style>
+
+    /* =========================================================
+       HERO DE SANTOS PATRONOS
+    ========================================================== */
+
+    .santos-hero {
+
+      position: relative;
+
+      min-height: 430px;
+
+      padding: 140px 0 70px;
+
+      display: flex;
+
+      align-items: center;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          135deg,
+          #173B7A 0%,
+          #102B5C 65%,
+          #C62828 100%
+        );
+
+      color: #ffffff;
+    }
+
+
+    .santos-hero::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 420px;
+      height: 420px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255, 255, 255, 0.04);
+
+      top: -180px;
+      right: -100px;
+    }
+
+
+    .santos-hero::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(198, 40, 40, 0.15);
+
+      bottom: -170px;
+      left: -100px;
+    }
+
+
+    .santos-hero-content {
+
+      position: relative;
+
+      z-index: 2;
+
+      width: 100%;
+
+      text-align: center;
+    }
+
+
+    .santos-hero h1 {
+
+      margin: 0 0 18px;
+
+      font-family: 'Poppins', sans-serif;
+
+      font-size: clamp(3rem, 6vw, 4.5rem);
+
+      font-weight: 800;
+
+      line-height: 1.1;
+
+      color: #ffffff;
+
+      text-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.25);
+    }
+
+
+    .santos-hero-subtitle {
+
+      max-width: 850px;
+
+      margin: 0 auto;
+
+      font-size: 1.2rem;
+
+      font-weight: 400;
+
+      line-height: 1.7;
+
+      color:
+        rgba(255, 255, 255, 0.92);
+    }
+
+
+    /* =========================================================
+       ENCABEZADO DE SECCIÓN
+    ========================================================== */
+
+    .santos-heading {
+
+      text-align: center;
+
+      max-width: 850px;
+
+      margin: 0 auto 60px;
+    }
+
+
+    .santos-heading-label {
+
+      display: inline-block;
+
+      margin-bottom: 12px;
+
+      font-family: 'Poppins', sans-serif;
+
+      font-size: 0.8rem;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      color: #C62828;
+    }
+
+
+    .santos-heading h2 {
+
+      margin-bottom: 15px;
+
+      font-family: 'Poppins', sans-serif;
+
+      font-size: clamp(2rem, 4vw, 3rem);
+
+      font-weight: 800;
+
+      color: #173B7A;
+    }
+
+
+    .santos-heading-line {
+
+      width: 80px;
+
+      height: 4px;
+
+      margin: 0 auto 20px;
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #C62828,
+          #173B7A
+        );
+    }
+
+
+    .santos-heading p {
+
+      margin: 0;
+
+      color: #64748B;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================================================
+       SECCIÓN PRINCIPAL
+    ========================================================== */
+
+    .santos-patronos-section {
+
+      padding: 90px 0;
+
+      background: #ffffff;
+    }
+
+
+    .santo-bloque {
+
+      margin-bottom: 90px;
+    }
+
+
+    .santo-bloque:last-child {
+
+      margin-bottom: 0;
+    }
+
+
+    /* =========================================================
+       TARJETA DEL SANTO
+    ========================================================== */
+
+    .santo-card {
+
+      height: 100%;
+
+      padding: 40px;
+
+      background: #ffffff;
+
+      border-radius: 22px;
+
+      border: 1px solid #E2E8F0;
+
+      border-left: 5px solid #C62828;
+
+      box-shadow:
+        0 10px 30px rgba(23, 59, 122, 0.08);
+
+      transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+
+    .santo-card:hover {
+
+      transform: translateY(-6px);
+
+      box-shadow:
+        0 20px 40px rgba(23, 59, 122, 0.14);
+    }
+
+
+    .santo-card h3 {
+
+      margin-bottom: 22px;
+
+      font-family: 'Poppins', sans-serif;
+
+      font-size: 1.8rem;
+
+      font-weight: 800;
+
+      color: #173B7A;
+    }
+
+
+    .santo-card p {
+
+      margin-bottom: 16px;
+
+      font-size: 1rem;
+
+      line-height: 1.85;
+
+      color: #475569;
+    }
+
+
+    /* =========================================================
+       FRASE DEL SANTO
+    ========================================================== */
+
+    .santo-frase {
+
+      margin-top: 25px;
+
+      padding: 18px 20px;
+
+      border-left: 4px solid #173B7A;
+
+      background:
+        rgba(23, 59, 122, 0.05);
+
+      border-radius: 0 12px 12px 0;
+    }
+
+
+    .santo-frase strong {
+
+      display: block;
+
+      margin-bottom: 6px;
+
+      font-family: 'Poppins', sans-serif;
+
+      color: #173B7A;
+    }
+
+
+    .santo-frase span {
+
+      font-style: italic;
+
+      color: #475569;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       DATO CURIOSO
+    ========================================================== */
+
+    .dato-curioso {
+
+      margin-top: 28px;
+
+      padding: 20px 22px;
+
+      border-left: 4px solid #C62828;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(198, 40, 40, 0.05),
+          rgba(23, 59, 122, 0.04)
+        );
+
+      border-radius: 0 14px 14px 0;
+    }
+
+
+    .dato-curioso h4 {
+
+      margin-bottom: 10px;
+
+      font-family: 'Poppins', sans-serif;
+
+      font-size: 1rem;
+
+      font-weight: 800;
+
+      color: #C62828;
+    }
+
+
+    .dato-curioso h4 i {
+
+      margin-right: 8px;
+    }
+
+
+    .dato-curioso p {
+
+      margin: 0;
+
+      font-size: 0.95rem;
+
+      line-height: 1.75;
+
+      font-style: italic;
+
+      color: #64748B;
+    }
+
+
+    /* =========================================================
+       IMÁGENES
+    ========================================================== */
+
+    .santo-imagen-contenedor {
+
+      width: 100%;
+
+      max-width: 480px;
+
+      margin: 0 auto;
+
+      position: relative;
+    }
+
+
+    .santo-imagen-contenedor::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 85%;
+
+      height: 85%;
+
+      right: -15px;
+
+      bottom: -15px;
+
+      border-radius: 22px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(198, 40, 40, 0.15),
+          rgba(23, 59, 122, 0.15)
+        );
+
+      z-index: 0;
+    }
+
+
+    .santo-imagen {
+
+      position: relative;
+
+      z-index: 1;
+
+      display: block;
+
+      width: 100%;
+
+      height: 450px;
+
+      object-fit: cover;
+
+      object-position: center top;
+
+      border-radius: 22px;
+
+      box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.15);
+    }
+
+
+    /* =========================================================
+       SECCIÓN ALTERNATIVA
+    ========================================================== */
+
+    .santo-bloque:nth-child(even) {
+
+      background: transparent;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================== */
+
+    @media (max-width: 991px) {
+
+      .santos-hero {
+
+        min-height: 400px;
+
+        padding: 130px 0 60px;
+      }
+
+
+      .santos-hero h1 {
+
+        font-size: 3.2rem;
+      }
+
+
+      .santo-card {
+
+        padding: 32px;
+      }
+
+
+      .santo-imagen {
+
+        height: 400px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .santos-hero {
+
+        min-height: 370px;
+
+        padding: 120px 20px 55px;
+      }
+
+
+      .santos-hero h1 {
+
+        font-size: 2.6rem;
+      }
+
+
+      .santos-hero-subtitle {
+
+        font-size: 1rem;
+      }
+
+
+      .santos-patronos-section {
+
+        padding: 65px 0;
+      }
+
+
+      .santos-heading {
+
+        margin-bottom: 45px;
+      }
+
+
+      .santo-bloque {
+
+        margin-bottom: 65px;
+      }
+
+
+      .santo-card {
+
+        padding: 26px 22px;
+      }
+
+
+      .santo-card h3 {
+
+        font-size: 1.55rem;
+      }
+
+
+      .santo-imagen {
+
+        height: 340px;
+      }
+    }
+
+
+    @media (max-width: 575px) {
+
+      .santos-hero h1 {
+
+        font-size: 2.2rem;
+      }
+
+
+      .santos-hero-subtitle {
+
+        font-size: 0.95rem;
+      }
+
+
+      .santo-imagen {
+
+        height: 300px;
+      }
+    }
+
+  </style>
+
+</head>
+
+
+<body id="inicio">
+
+
+  <!-- =========================================================
+       NAVBAR
+  ========================================================== -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+
+    <div class="container">
+
+
+      <!-- LOGO -->
+
+      <a class="navbar-brand"
+        href="Asociación.html"
+        aria-label="Inicio">
+
+        <img
+          class="logo-escudo"
+          src="logos/fondo.jpeg"
+          alt="Logo del Instituto Técnico Asociación Escolar María Goretti" />
+
+        <span class="brand-text">
+
+          <strong>
+            Instituto Técnico
+          </strong>
+
+          <br />
+
+          Asociación Escolar María Goretti
+
+        </span>
+
+      </a>
+
+
+      <!-- BOTÓN RESPONSIVE -->
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Abrir menú">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <!-- MENÚ -->
+
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNav">
+
+        <ul class="navbar-nav">
+
+
+          <!-- =================================================
+               INSTITUCIÓN
+          ================================================== -->
+
+          <li class="nav-item dropdown">
+
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+
+              Institución
+
+            </a>
+
+
+            <ul class="dropdown-menu">
+
+              <li>
+
+                <a
+                  class="dropdown-item"
+                  href="quienes-somos.html">
+
+                  Quiénes somos
+
+                </a>
+
+              </li>
+
+
+              <li>
+
+                <a
+                  class="dropdown-item"
+                  href="direccionamiento-institucional.html">
+
+                  Direccionamiento Institucional
+
+                </a>
+
+              </li>
+
+
+              <li>
+
+                <a
+                  class="dropdown-item"
+                  href="equipo.html">
+
+                  Equipo institucional
+
+                </a>
+
+              </li>
+
+
+              <li>
+
+                <a
+                  class="dropdown-item"
+                  href="santos-patronos.html">
+
+                  Santos Patronos
+
+                </a>
+
+              </li>
+
+            </ul>
+
+          </li>
+
+
+          <!-- =================================================
+               PROGRAMAS
+          ================================================== -->
+
+          <li class="nav-item dropdown">
+
+            <a
+              class="nav-link dropdown-toggle"
+              href="#programas"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+
+              Programas
+
+            </a>
+
+
+            <ul class="dropdown-menu">
+
+              <li>
+
+                <a
+                  class="dropdown-item"
+                  href="asesor-comercial.html">
+
+                  Técnico Laboral en Asesor Comercial
+
+                </a>
+
+              </li>
+
+
+              <li>
+
+                <a
+                  class="dropdown-item"
+                  href="#programas">
+
+                  Técnico Laboral en Primera Infancia
+
+                </a>
+
+              </li>
+
+
+              <li>
+
+                <a
+                  class="dropdown-item"
+                  href="#programas">
+
+                  Técnico Laboral en Auxiliar Administrativo
+
+                </a>
+
+              </li>
+
+            </ul>
+
+          </li>
+
+
+          <!-- =================================================
+               ESTUDIANTES
+          ================================================== -->
+
+          <li class="nav-item dropdown">
+
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+
+              Estudiantes
+
+            </a>
+
+
+            <ul class="dropdown-menu">
+
+              <li>
+
+                <a
+                  class="dropdown-item"
+                  href="documentos.html">
+
+                  Documentos
+
+                </a>
+
+              </li>
+
+
+              <li>
+
+                <a
+                  class="dropdown-item"
+                  href="calendario.html">
+
+                  Calendario académico
+
+                </a>
+
+              </li>
+
+            </ul>
+
+          </li>
+
+
+          <!-- =================================================
+               NOTICIAS
+          ================================================== -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="Asociación.html#noticias">
+
+              Noticias
+
+            </a>
+
+          </li>
+
+
+          <!-- =================================================
+               CONTACTO
+          ================================================== -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="#contacto">
+
+              Contacto
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
+
+  <header class="santos-hero">
+
+    <div class="santos-hero-content">
+
+      <div class="container">
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000">
+
+          <h1>
+            Santos Patronos
+          </h1>
+
+
+          <p class="santos-hero-subtitle">
+
+            Ejemplos de fe, humildad y entrega al amor de Dios
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL
+  ========================================================== -->
+
+  <main>
+
+
+    <!-- =======================================================
+         INTRODUCCIÓN
+    ======================================================== -->
+
+    <section class="santos-patronos-section">
+
+      <div class="container">
+
+
+        <div
+          class="santos-heading"
+          data-aos="fade-up">
+
+          <span class="santos-heading-label">
+            IDENTIDAD Y ESPIRITUALIDAD
+          </span>
+
+
+          <h2>
+            Nuestros Santos Patronos
+          </h2>
+
+
+          <div class="santos-heading-line"></div>
+
+
+          <p>
+
+            Los santos patronos representan modelos de vida,
+            fe, servicio, humildad y entrega a Dios que inspiran
+            la formación integral promovida por el Instituto Técnico
+            Asociación Escolar María Goretti.
+
+          </p>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SANTA MARÍA GORETTI
+        ====================================================== -->
+
+        <div
+          class="row align-items-center g-5 santo-bloque"
+          data-aos="fade-up">
+
+
+          <!-- TEXTO -->
+
+          <div class="col-lg-6">
+
+            <article class="santo-card">
+
+              <h3>
+                Santa María Goretti
+              </h3>
+
+
+              <p>
+
+                Santa María Goretti nació en Italia en 1890.
+                Era una niña muy buena, alegre y obediente,
+                que ayudaba a su mamá en la casa y cuidaba
+                a sus hermanos. Le gustaba rezar y siempre
+                trataba de hacer lo que agradaba a Dios.
+
+              </p>
+
+
+              <p>
+
+                Cuando tenía 11 años, un joven quiso hacerle
+                daño, pero ella se defendió diciendo que eso
+                estaba mal y que no quería ofender a Dios.
+                El joven, enojado, la hirió con un cuchillo.
+
+              </p>
+
+
+              <p>
+
+                María fue llevada al hospital, donde sufrió
+                mucho, pero antes de morir perdonó al joven
+                que la había lastimado. Murió en 1902.
+
+              </p>
+
+
+              <p>
+
+                Con el tiempo, el joven se arrepintió,
+                pidió perdón y cambió su vida. María fue
+                declarada santa en 1950, y hoy es recordada
+                como ejemplo de pureza, valentía y perdón.
+
+              </p>
+
+
+              <div class="dato-curioso">
+
+                <h4>
+
+                  <i class="fas fa-lightbulb"></i>
+
+                  Dato Curioso
+
+                </h4>
+
+
+                <p>
+
+                  La ceremonia de canonización de Santa
+                  María Goretti en 1950 fue única. Por
+                  primera vez, la madre de una santa,
+                  Assunta Goretti, estuvo presente.
+                  Además, su asesino, Alessandro Serenelli,
+                  ya arrepentido y convertido, también
+                  vivió para verla elevada a los altares,
+                  un poderoso testimonio del perdón que
+                  ella le otorgó.
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+
+          <!-- IMAGEN -->
+
+          <div class="col-lg-6">
+
+            <div
+              class="santo-imagen-contenedor"
+              data-aos="fade-left"
+              data-aos-delay="150">
+
+              <img
+                src="imagenesS/Santa María Goretti.jpeg"
+                alt="Santa María Goretti"
+                class="santo-imagen" />
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SAN FRANCISCO DE ASÍS
+        ====================================================== -->
+
+        <div
+          class="row align-items-center g-5 santo-bloque"
+          data-aos="fade-up">
+
+
+          <!-- IMAGEN -->
+
+          <div class="col-lg-6 order-lg-1 order-2">
+
+            <div
+              class="santo-imagen-contenedor"
+              data-aos="fade-right"
+              data-aos-delay="150">
+
+              <img
+                src="imagenesS/San Francisco de Asís.jpeg"
+                alt="San Francisco de Asís"
+                class="santo-imagen" />
+
+            </div>
+
+          </div>
+
+
+          <!-- TEXTO -->
+
+          <div class="col-lg-6 order-lg-2 order-1">
+
+            <article class="santo-card">
+
+              <h3>
+                San Francisco de Asís
+              </h3>
+
+
+              <p>
+
+                San Francisco de Asís nació en 1182 en Italia.
+                Al principio fue un joven alegre al que le
+                gustaban las fiestas y gastar dinero, pero
+                después escuchó el llamado de Dios y decidió
+                cambiar su vida. Renunció a sus riquezas y
+                eligió vivir en pobreza, sirviendo a Jesús
+                y predicando el amor de Dios.
+
+              </p>
+
+
+              <p>
+
+                Fue amigo de los animales y veía en toda la
+                creación la obra de Dios. Fundó la orden de
+                los Franciscanos, y con la ayuda de Santa
+                Clara también nació la orden de las Clarisas.
+
+              </p>
+
+
+              <p>
+
+                Un día, al encontrarse con un leproso, venció
+                su miedo y lo abrazó con amor, descubriendo
+                que en él estaba Jesús. Desde entonces,
+                San Francisco vivió con alegría, humildad
+                y fe, enseñándonos que todos podemos ser
+                santos si seguimos a Jesús de corazón.
+
+              </p>
+
+
+              <div class="santo-frase">
+
+                <strong>
+                  Frase célebre de San Francisco de Asís:
+                </strong>
+
+
+                <span>
+                  “Señor, haz de mí un instrumento de tu paz.”
+                </span>
+
+              </div>
+
+
+              <div class="dato-curioso">
+
+                <h4>
+
+                  <i class="fas fa-lightbulb"></i>
+
+                  Dato Curioso
+
+                </h4>
+
+
+                <p>
+
+                  San Francisco de Asís es conocido como
+                  el santo patrono de los animales y el
+                  medio ambiente. Creó el primer pesebre
+                  o nacimiento navideño en 1223 para
+                  explicar de manera sencilla la historia
+                  del nacimiento de Jesús a la gente
+                  del pueblo.
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SANTA CLARA DE ASÍS
+        ====================================================== -->
+
+        <div
+          class="row align-items-center g-5 santo-bloque"
+          data-aos="fade-up">
+
+
+          <!-- TEXTO -->
+
+          <div class="col-lg-6">
+
+            <article class="santo-card">
+
+              <h3>
+                Santa Clara de Asís
+              </h3>
+
+
+              <p>
+
+                Santa Clara de Asís nació en 1193 en Asís,
+                Italia, en una familia noble. Desde niña
+                mostró un corazón compasivo hacia los pobres.
+                Cuando conoció a San Francisco de Asís quedó
+                profundamente inspirada por su forma sencilla
+                y humilde de seguir a Cristo. A los 18 años
+                decidió renunciar a su riqueza y título para
+                vivir una vida dedicada a la oración y
+                el servicio.
+
+              </p>
+
+
+              <p>
+
+                Con la guía de San Francisco, fundó la Orden
+                de las Hermanas Pobres, conocidas hoy como
+                Las Clarisas, cuyo ideal principal era la
+                pobreza absoluta y la confianza total en la
+                providencia de Dios. Clara vivió una vida
+                de profunda espiritualidad, sencillez y
+                entrega. Falleció el 11 de agosto de 1253
+                y fue canonizada dos años después.
+
+              </p>
+
+
+              <div class="santo-frase">
+
+                <strong>
+                  Frase célebre de Santa Clara:
+                </strong>
+
+
+                <span>
+                  "Gracias porque me pensaste;
+                  porque me creaste, gracias."
+                </span>
+
+              </div>
+
+
+              <div class="dato-curioso">
+
+                <h4>
+
+                  <i class="fas fa-lightbulb"></i>
+
+                  Dato Curioso
+
+                </h4>
+
+
+                <p>
+
+                  Durante un ataque militar contra Asís,
+                  Santa Clara tomó el Santísimo Sacramento
+                  y lo elevó en oración frente al enemigo.
+                  Según la tradición, los atacantes
+                  retrocedieron de inmediato, impresionados
+                  y desconcertados, sin que ella ni la
+                  comunidad sufrieran daño.
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+
+          <!-- IMAGEN -->
+
+          <div class="col-lg-6">
+
+            <div
+              class="santo-imagen-contenedor"
+              data-aos="fade-left"
+              data-aos-delay="150">
+
+              <img
+                src="imagenesS/Santa Clara de Asís.jpeg"
+                alt="Santa Clara de Asís"
+                class="santo-imagen" />
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SAN CARLO ACUTIS
+        ====================================================== -->
+
+        <div
+          class="row align-items-center g-5 santo-bloque"
+          data-aos="fade-up">
+
+
+          <!-- IMAGEN -->
+
+          <div class="col-lg-6 order-lg-1 order-2">
+
+            <div
+              class="santo-imagen-contenedor"
+              data-aos="fade-right"
+              data-aos-delay="150">
+
+              <img
+                src="imagenesS/San Carlo Acutis.jpeg"
+                alt="San Carlo Acutis"
+                class="santo-imagen" />
+
+            </div>
+
+          </div>
+
+
+          <!-- TEXTO -->
+
+          <div class="col-lg-6 order-lg-2 order-1">
+
+            <article class="santo-card">
+
+              <h3>
+                San Carlo Acutis
+              </h3>
+
+
+              <p>
+
+                Carlo Acutis nació el 3 de mayo de 1991 en
+                Londres, Reino Unido, pero creció en Milán,
+                Italia. Desde muy pequeño mostró una profunda
+                fe y amor por Dios, destacándose por su
+                especial devoción a la Eucaristía, a la que
+                llamaba “mi autopista al cielo”. A pesar de
+                vivir en una época moderna, Carlo supo
+                integrar la tecnología con su espiritualidad,
+                utilizando sus conocimientos en informática
+                para evangelizar.
+
+              </p>
+
+
+              <p>
+
+                Durante su vida, creó una página web donde
+                recopiló y difundió milagros eucarísticos
+                de todo el mundo, con el objetivo de acercar
+                a más personas a la fe. Carlo se caracterizó
+                por su sencillez, generosidad y preocupación
+                por los demás, ayudando a personas necesitadas
+                y defendiendo valores cristianos en su
+                entorno cotidiano.
+
+              </p>
+
+
+              <p>
+
+                Falleció el 12 de octubre de 2006 a causa
+                de una leucemia, enfermedad que ofreció por
+                el Papa y la Iglesia. Fue beatificado el
+                10 de octubre de 2020, siendo reconocido
+                como un ejemplo de santidad en la era digital.
+
+              </p>
+
+
+              <div class="santo-frase">
+
+                <strong>
+                  Frase célebre de San Carlo Acutis:
+                </strong>
+
+
+                <span>
+                  “La Eucaristía es mi autopista al cielo.”
+                </span>
+
+              </div>
+
+
+              <div class="dato-curioso">
+
+                <h4>
+
+                  <i class="fas fa-lightbulb"></i>
+
+                  Dato Curioso
+
+                </h4>
+
+
+                <p>
+
+                  Carlo Acutis es considerado el primer
+                  “influencer de Dios”, ya que utilizó
+                  internet y la tecnología para difundir
+                  el mensaje cristiano, demostrando que
+                  la santidad también es posible en el
+                  mundo moderno.
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer class="footer" id="contacto">
+
+    <div class="container">
+
+      <div class="row g-5">
+
+
+        <!-- =================================================
+             INSTITUCIÓN
+        ================================================== -->
+
+        <div class="col-lg-4">
+
+          <div class="footer-title">
+
+            <img
+              class="footer-logo"
+              src="logos/fondo.jpeg"
+              alt="Logo del Instituto Técnico Asociación Escolar María Goretti" />
+
+
+            <span class="footer-instituto">
+
+              <strong>
+                Instituto Técnico
+              </strong>
+
+              <br />
+
+              Asociación Escolar María Goretti
+
+            </span>
+
+          </div>
+
+
+          <p class="footer-text">
+
+            Institución orientada a la formación técnica,
+            académica y humana, promoviendo el desarrollo
+            de competencias para la construcción de nuevas
+            oportunidades.
+
+          </p>
+
+
+          <div class="social-icons">
+
+            <a
+              href="#"
+              aria-label="Facebook">
+
+              <i class="fab fa-facebook-f"></i>
+
+            </a>
+
+
+            <a
+              href="#"
+              aria-label="Instagram">
+
+              <i class="fab fa-instagram"></i>
+
+            </a>
+
+
+            <a
+              href="#"
+              aria-label="YouTube">
+
+              <i class="fab fa-youtube"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CONTACTO
+        ================================================== -->
+
+        <div class="col-lg-4">
+
+          <h4>
+            Información de contacto
+          </h4>
+
+
+          <div class="contact-info">
+
+
+            <p>
+
+              <i class="fas fa-map-marker-alt"></i>
+
+              <span>
+                Pasto, Nariño, Colombia
+              </span>
+
+            </p>
+
+
+            <p>
+
+              <i class="fas fa-phone"></i>
+
+              <span>
+                Teléfono: Próximamente
+              </span>
+
+            </p>
+
+
+            <p>
+
+              <i class="fas fa-envelope"></i>
+
+              <span>
+                Correo: Próximamente
+              </span>
+
+            </p>
+
+
+            <p>
+
+              <i class="fas fa-clock"></i>
+
+              <span>
+                Horarios de atención: Próximamente
+              </span>
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ENLACES RÁPIDOS
+        ================================================== -->
+
+        <div class="col-lg-4">
+
+          <h4>
+            Enlaces rápidos
+          </h4>
+
+
+          <div class="row">
+
+
+            <!-- COLUMNA 1 -->
+
+            <div class="col-6">
+
+              <ul class="footer-links">
+
+
+                <li>
+
+                  <a href="Asociación.html">
+
+                    <i class="fas fa-home"></i>
+
+                    Inicio
+
+                  </a>
+
+                </li>
+
+
+                <li>
+
+                  <a href="direccionamiento-institucional.html">
+
+                    <i class="fas fa-bullseye"></i>
+
+                    Direccionamiento
+
+                  </a>
+
+                </li>
+
+
+                <li>
+
+                  <a href="#">
+
+                    <i class="fas fa-graduation-cap"></i>
+
+                    Programas
+
+                  </a>
+
+                </li>
+
+
+                <li>
+
+                  <a href="#">
+
+                    <i class="fas fa-user-plus"></i>
+
+                    Matrícula
+
+                  </a>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+            <!-- COLUMNA 2 -->
+
+            <div class="col-6">
+
+              <ul class="footer-links">
+
+
+                <li>
+
+                  <a href="documentos.html">
+
+                    <i class="fas fa-file-alt"></i>
+
+                    Documentos
+
+                  </a>
+
+                </li>
+
+
+                <li>
+
+                  <a href="calendario.html">
+
+                    <i class="fas fa-calendar"></i>
+
+                    Calendario
+
+                  </a>
+
+                </li>
+
+
+                <li>
+
+                  <a href="Asociación.html#noticias">
+
+                    <i class="fas fa-newspaper"></i>
+
+                    Noticias
+
+                  </a>
+
+                </li>
+
+
+                <li>
+
+                  <a href="#contacto">
+
+                    <i class="fas fa-envelope"></i>
+
+                    Contacto
+
+                  </a>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DIVISOR
+      ================================================== -->
+
+      <hr class="footer-divider" />
+
+
+
+      <!-- =================================================
+           COPYRIGHT
+      ================================================== -->
+
+      <p class="copyright">
+
+        © 2026 Instituto Técnico Asociación Escolar María Goretti.
+        Todos los derechos reservados.
+
+      </p>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================================================
+       WHATSAPP
+  ========================================================== -->
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/573124556699?text=Hola,%20quisiera%20recibir%20información%20sobre%20los%20programas%20del%20Instituto%20Técnico%20Asociación%20Escolar%20María%20Goretti."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp">
+
+    <i class="fab fa-whatsapp"></i>
+
+  </a>
+
+
+
+  <!-- =========================================================
+       VOLVER ARRIBA
+  ========================================================== -->
+
+  <button
+    class="scroll-top"
+    id="scrollTop"
+    aria-label="Volver arriba">
+
+    <i class="fas fa-arrow-up"></i>
+
+  </button>
+
+
+
+  <!-- =========================================================
+       BOOTSTRAP
+  ========================================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+
+  <script src="js/main.js"></script>
+
+
+  <!-- =========================================================
+       AOS
+  ========================================================== -->
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+  </script>
+
+
+  <script>
+
+    /* =========================================================
+       AOS
+    ========================================================== */
+
+    AOS.init({
+
+      duration: 800,
+
+      easing: 'ease-in-out',
+
+      once: true,
+
+      mirror: false
+
+    });
+
+
+    /* =========================================================
+       NAVBAR AL HACER SCROLL
+    ========================================================== */
+
+    window.addEventListener('scroll', function () {
+
+      const navbar =
+        document.getElementById('mainNavbar');
+
+
+      if (!navbar) {
+        return;
+      }
+
+
+      if (window.scrollY > 50) {
+
+        navbar.classList.add('scrolled');
+
+      } else {
+
+        navbar.classList.remove('scrolled');
+
+      }
+
+    });
+
+
+    /* =========================================================
+       BOTÓN VOLVER ARRIBA
+    ========================================================== */
+
+    const scrollTop =
+      document.getElementById('scrollTop');
+
+
+    window.addEventListener('scroll', function () {
+
+      if (!scrollTop) {
+        return;
+      }
+
+
+      if (window.scrollY > 300) {
+
+        scrollTop.classList.add('show');
+
+      } else {
+
+        scrollTop.classList.remove('show');
+
+      }
+
+    });
+
+
+    if (scrollTop) {
+
+      scrollTop.addEventListener('click', function () {
+
+        window.scrollTo({
+
+          top: 0,
+
+          behavior: 'smooth'
+
+        });
+
+      });
+
+    }
+
+  </script>
+
+</body>
+
+</html>
