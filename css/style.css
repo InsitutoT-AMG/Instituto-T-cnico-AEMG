@@ -10,15 +10,13 @@
 ========================================================= */
 
 :root {
-  --primary-red: #C62828;
-  --primary-red-dark: #991B1B;
-  --primary-red-light: #EF5350;
+  --primary-blue: #123b66;
+  --primary-blue-dark: #0c2847;
+  --primary-blue-light: #1d5d91;
 
-  --primary-blue: #173B7A;
-  --primary-blue-dark: #102B5C;
-  --primary-blue-light: #315DA8;
-
-  --gold: #D9A441;
+  --gold: #c79a3b;
+  --gold-dark: #a67d2e;
+  --gold-light: #f5e7c4;
 
   --text-dark: #1F2937;
   --text-gray: #64748B;
@@ -93,7 +91,7 @@ section {
 #mainNavbar {
   min-height: 114px;
 
-  background: #173B7A;
+  background: #123b66;
 
   backdrop-filter: blur(12px);
 
@@ -209,7 +207,7 @@ section {
 .dropdown-item:hover {
   background: #F1F5F9;
 
-  color: var(--primary-red);
+  color: var(--gold);
 }
 
 
@@ -486,7 +484,7 @@ section {
 
 .btn-hero-primary {
 
-  background: var(--primary-red);
+  background: var(--gold);
 
   border: 2px solid var(--white);
 
@@ -495,7 +493,7 @@ section {
 
 .btn-hero-primary:hover {
 
-  background: var(--primary-red-dark);
+  background: var(--gold-dark);
 
   color: var(--white);
 
@@ -549,8 +547,8 @@ section {
 
   background:
     linear-gradient(135deg,
-      rgba(23, 59, 122, .97),
-      rgba(16, 43, 92, .94));
+      rgba(18, 59, 102, .97),
+      rgba(12, 40, 71, .94));
 }
 
 .page-hero-content {
@@ -645,7 +643,7 @@ section {
 
   display: inline-block;
 
-  color: var(--primary-red);
+  color: var(--gold);
 
   font-size: .76rem;
 
@@ -683,7 +681,7 @@ section {
 
   height: 4px;
 
-  background: var(--primary-red);
+  background: var(--gold);
 
   border-radius: 50px;
 
@@ -715,7 +713,7 @@ section {
 
   line-height: 1.8;
 
-  font-size: 1rem;
+  font-size: 1.08rem;
 
   margin: 0;
 }
@@ -724,11 +722,24 @@ section {
 
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   gap: 25px;
 
   align-items: stretch;
+}
+
+/* La tercera tarjeta (Filosofía) ocupa el ancho completo,
+   igual que la última tarjeta del grid de Principios, para
+   que el texto no quede apretado en una columna angosta. */
+.directional-grid .directional-card:last-child {
+
+  grid-column: 1 / -1;
+}
+
+.directional-grid .directional-card:last-child .directional-card-content {
+
+  max-width: 760px;
 }
 
 
@@ -776,7 +787,7 @@ section {
   height: 5px;
 
   background: linear-gradient(90deg,
-      var(--primary-red),
+      var(--gold),
       var(--primary-blue));
 }
 
@@ -786,7 +797,7 @@ section {
 
   box-shadow: var(--shadow-md);
 
-  border-color: rgba(198, 40, 40, .20);
+  border-color: rgba(199, 154, 59, .20);
 }
 
 .directional-card-header {
@@ -814,16 +825,16 @@ section {
 
   border-radius: 16px;
 
-  background: #FFF1F1;
+  background: var(--gold-light);
 
-  color: var(--primary-red);
+  color: var(--gold);
 
   font-size: 1.35rem;
 }
 
 .directional-card-label {
 
-  color: var(--primary-red);
+  color: var(--gold);
 
   font-size: .70rem;
 
@@ -853,7 +864,7 @@ section {
 
   height: 4px;
 
-  background: var(--primary-red);
+  background: var(--gold);
 
   border-radius: 50px;
 
@@ -976,7 +987,7 @@ section {
 
   line-height: 1.7;
 
-  font-size: .92rem;
+  font-size: .98rem;
 }
 
 
@@ -1054,7 +1065,7 @@ section {
 
   color: var(--primary-blue);
 
-  font-size: 1rem;
+  font-size: 1.06rem;
 
   font-weight: 800;
 
@@ -1067,7 +1078,7 @@ section {
 
   color: var(--text-gray);
 
-  font-size: .86rem;
+  font-size: .94rem;
 
   line-height: 1.7;
 
@@ -1169,7 +1180,7 @@ section {
 
 .programa-link {
 
-  color: var(--primary-red);
+  color: var(--gold);
 
   font-weight: 800;
 
@@ -1186,7 +1197,7 @@ section {
 
 .programa-link:hover {
 
-  color: var(--primary-red-dark);
+  color: var(--gold-dark);
 }
 
 
@@ -1268,9 +1279,9 @@ section {
 
   place-items: center;
 
-  color: var(--primary-red);
+  color: var(--gold);
 
-  background: #FFF1F1;
+  background: var(--gold-light);
 
   font-size: 1.25rem;
 }
@@ -1305,8 +1316,8 @@ section {
 
   background:
     linear-gradient(145deg,
-      rgba(198, 40, 40, .95),
-      rgba(153, 27, 27, .90)),
+      rgba(199, 154, 59, .95),
+      rgba(166, 125, 46, .90)),
     url("../imagenes/estudiantes.jpg") center/cover;
 
   display: flex;
@@ -1419,8 +1430,8 @@ section {
 
   background:
     linear-gradient(135deg,
-      var(--primary-red),
-      #EF5350);
+      var(--gold),
+      #e2b768);
 }
 
 .noticia-contenido {
@@ -1432,7 +1443,7 @@ section {
 
   display: inline-block;
 
-  color: var(--primary-red);
+  color: var(--gold);
 
   font-size: .76rem;
 
@@ -1463,7 +1474,7 @@ section {
 
 .noticia-link {
 
-  color: var(--primary-red);
+  color: var(--gold);
 
   font-weight: 800;
 
@@ -1480,7 +1491,7 @@ section {
 
 .noticia-link:hover {
 
-  color: var(--primary-red-dark);
+  color: var(--gold-dark);
 }
 
 
@@ -1546,11 +1557,11 @@ section {
 
   justify-content: center;
 
-  background: var(--primary-red);
+  background: var(--gold);
 
-  border: 3px solid var(--primary-red);
+  border: 3px solid var(--gold);
 
-  outline: 2px solid rgba(198, 40, 40, .35);
+  outline: 2px solid rgba(199, 154, 59, .35);
 
   outline-offset: 3px;
 
@@ -1572,11 +1583,11 @@ section {
 
 .btn-matricula:hover {
 
-  background: var(--primary-red-dark);
+  background: var(--gold-dark);
 
-  border-color: var(--primary-red-dark);
+  border-color: var(--gold-dark);
 
-  outline-color: rgba(153, 27, 27, .35);
+  outline-color: rgba(166, 125, 46, .35);
 
   color: var(--white);
 
@@ -1685,7 +1696,7 @@ section {
 
 .social-icons a:hover {
 
-  background: var(--primary-red);
+  background: var(--gold);
 
   transform: translateY(-3px);
 }
@@ -1815,7 +1826,7 @@ section {
 
   bottom: 90px;
 
-  background: var(--primary-red);
+  background: var(--gold);
 
   border: 0;
 
@@ -1861,7 +1872,7 @@ section {
 
   border: 1px solid #e2e5ea;
 
-  border-top: 4px solid var(--primary-red);
+  border-top: 4px solid var(--gold);
 
   border-radius: 0 0 22px 22px;
 
@@ -1942,7 +1953,7 @@ section {
 
   background: #ffffff;
 
-  border: 2px solid var(--primary-red);
+  border: 2px solid var(--gold);
 
   border-radius: 16px;
 
@@ -1972,7 +1983,7 @@ section {
 .entidades-footer-logos a:hover {
   transform: translateY(-5px);
 
-  box-shadow: 0 8px 20px rgba(198, 40, 40, 0.15);
+  box-shadow: 0 8px 20px rgba(199, 154, 59, 0.15);
 }
 
 
@@ -2120,7 +2131,7 @@ section {
   height: 5px;
 
   background: linear-gradient(90deg,
-      var(--primary-red),
+      var(--gold),
       var(--primary-blue));
 }
 
@@ -2130,7 +2141,7 @@ section {
 
   box-shadow: var(--shadow-md);
 
-  border-color: rgba(198, 40, 40, .20);
+  border-color: rgba(199, 154, 59, .20);
 }
 
 .mision-vision-icon {
@@ -2147,9 +2158,9 @@ section {
 
   justify-content: center;
 
-  background: #FFF1F1;
+  background: var(--gold-light);
 
-  color: var(--primary-red);
+  color: var(--gold);
 
   border-radius: 16px;
 
@@ -2160,7 +2171,7 @@ section {
 
 .mision-vision-card:hover .mision-vision-icon {
 
-  background: var(--primary-red);
+  background: var(--gold);
 
   color: var(--white);
 
@@ -2178,7 +2189,7 @@ section {
 
   display: inline-block;
 
-  color: var(--primary-red);
+  color: var(--gold);
 
   font-size: .78rem;
 
@@ -2236,7 +2247,7 @@ section {
 ========================================================= */
 
 .santos-hero {
-  background: #173B7A;
+  background: #123b66;
   min-height: 430px;
   padding: 140px 0 70px;
   display: flex;
@@ -2348,7 +2359,7 @@ section {
 
   border-radius: 50%;
 
-  border: 1px solid rgba(23, 59, 122, .08);
+  border: 1px solid rgba(18, 59, 102, .08);
 
   top: 50%;
 
@@ -2369,7 +2380,7 @@ section {
 
   border-radius: 50%;
 
-  border: 1px solid rgba(198, 40, 40, .06);
+  border: 1px solid rgba(199, 154, 59, .06);
 
   top: 50%;
 
@@ -2437,7 +2448,7 @@ section {
 
   align-items: center;
 
-  color: var(--primary-red);
+  color: var(--gold);
 
   font-size: .78rem;
 
@@ -2469,7 +2480,7 @@ section {
 
   height: 4px;
 
-  background: var(--primary-red);
+  background: var(--gold);
 
   border-radius: 50px;
 
@@ -2505,14 +2516,14 @@ section {
 
   background: #F5F7FA;
 
-  border-left: 4px solid var(--primary-red);
+  border-left: 4px solid var(--gold);
 
   border-radius: 0 12px 12px 0;
 }
 
 .santo-frase>i {
 
-  color: var(--primary-red);
+  color: var(--gold);
 
   font-size: 1.3rem;
 
@@ -2557,10 +2568,10 @@ section {
 
   background:
     linear-gradient(135deg,
-      rgba(23, 59, 122, .05),
-      rgba(198, 40, 40, .035));
+      rgba(18, 59, 102, .05),
+      rgba(199, 154, 59, .035));
 
-  border: 1px solid rgba(23, 59, 122, .08);
+  border: 1px solid rgba(18, 59, 102, .08);
 
   border-radius: 12px;
 }
@@ -3303,7 +3314,7 @@ section {
 
 :focus-visible {
 
-  outline: 3px solid rgba(49, 93, 168, .35);
+  outline: 3px solid rgba(29, 93, 145, .35);
 
   outline-offset: 3px;
 }
@@ -3336,7 +3347,7 @@ section {
 
 /* El botón volver arriba conserva el rojo institucional */
 .scroll-top {
-  background: var(--primary-red) !important;
+  background: var(--gold) !important;
 }
 
 /* =========================================================
@@ -3437,8 +3448,8 @@ section {
 
   text-align: left;
 
-  font-size: 0.93rem;
-  line-height: 1.78;
+  font-size: 1.02rem;
+  line-height: 1.75;
 }
 
 
@@ -3458,7 +3469,7 @@ section {
 
   padding: 16px 17px;
 
-  border: 1px solid rgba(23, 59, 122, 0.10);
+  border: 1px solid rgba(18, 59, 102, 0.10);
   border-radius: 14px;
 
   background:
@@ -3468,8 +3479,8 @@ section {
 
   color: var(--primary-blue);
 
-  font-size: 0.84rem;
-  line-height: 1.65;
+  font-size: 0.93rem;
+  line-height: 1.68;
 }
 
 
@@ -3478,7 +3489,19 @@ section {
 
   margin-top: 4px;
 
-  color: var(--primary-red);
+  color: var(--gold);
+}
+
+/* El párrafo dentro del destacado hereda el color y tamaño
+   del contenedor en lugar del estilo de párrafo genérico. */
+.presentacion .directional-card-content .directional-card-highlight p {
+  margin: 0;
+
+  text-align: left;
+
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 
@@ -3639,7 +3662,7 @@ section {
 .principios-content-heading span {
   display: block;
 
-  color: var(--primary-red);
+  color: var(--gold);
 
   font-size: 0.72rem;
   font-weight: 800;
@@ -3653,7 +3676,7 @@ section {
 
   color: var(--text-gray);
 
-  font-size: 0.9rem;
+  font-size: 0.98rem;
   line-height: 1.6;
 }
 
@@ -3692,7 +3715,7 @@ section {
 
 .directional-principles .principio-card:hover {
   border-color:
-    rgba(198, 40, 40, 0.20);
+    rgba(199, 154, 59, 0.20);
 }
 
 
@@ -3707,7 +3730,7 @@ section {
   right: 16px;
 
   color:
-    rgba(23, 59, 122, 0.10);
+    rgba(18, 59, 102, 0.10);
 
   font-family: "Poppins", sans-serif;
 
@@ -3751,7 +3774,7 @@ section {
 
   padding-right: 34px;
 
-  font-size: 0.94rem;
+  font-size: 1.02rem;
   line-height: 1.3;
 }
 
@@ -3759,7 +3782,7 @@ section {
 .directional-principles .principio-text p {
   margin: 0;
 
-  font-size: 0.84rem;
+  font-size: 0.92rem;
   line-height: 1.62;
 }
 
@@ -3830,4 +3853,254 @@ section {
     margin-left: 0;
   }
 
+}
+
+
+/* =========================================================
+   NOMBRE OFICIAL (ETDH-AEMG)
+   Navbar, pie de página y portada con el nombre largo
+========================================================= */
+
+:root {
+  --gold-bright: #e9c46a;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar-brand {
+  white-space: normal;
+  max-width: 560px;
+  gap: 14px;
+}
+
+.navbar-brand .logo-escudo + span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 14px;
+  border-left: 2px solid var(--gold-bright);
+}
+
+.navbar-brand .nombre-pre {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -.005em;
+  text-wrap: balance;
+}
+
+.navbar-brand .nombre-principal,
+.navbar-brand .nombre-sigla {
+  display: inline;
+  font-family: "Poppins", sans-serif;
+  font-size: .64rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+
+.navbar-brand .nombre-principal {
+  margin-top: 5px;
+}
+
+#mainNavbar.navbar-scrolled .navbar-brand .nombre-principal,
+#mainNavbar.navbar-scrolled .navbar-brand .nombre-sigla {
+  color: var(--gold-dark);
+}
+
+#mainNavbar.navbar-scrolled .navbar-brand .logo-escudo + span {
+  border-left-color: var(--gold);
+}
+
+/* Pantallas medianas: dejar espacio al menú */
+@media (min-width: 992px) and (max-width: 1299px) {
+  .navbar-brand {
+    max-width: 380px;
+    gap: 10px;
+  }
+
+  .logo-escudo {
+    width: 64px !important;
+    height: 64px !important;
+    max-width: 64px !important;
+  }
+
+  .navbar-brand .logo-escudo + span {
+    padding-left: 10px;
+  }
+
+  .navbar-brand .nombre-pre {
+    font-size: .84rem;
+  }
+
+  .navbar-brand .nombre-principal,
+  .navbar-brand .nombre-sigla {
+    font-size: .56rem;
+    letter-spacing: .1em;
+  }
+}
+
+/* Celular */
+@media (max-width: 767px) {
+  .navbar-brand {
+    max-width: calc(100% - 70px);
+    gap: 9px;
+  }
+
+  .navbar-brand .logo-escudo + span {
+    padding-left: 9px;
+  }
+
+  .navbar-brand .nombre-pre {
+    font-size: .74rem;
+  }
+
+  .navbar-brand .nombre-principal,
+  .navbar-brand .nombre-sigla {
+    font-size: .5rem;
+    letter-spacing: .08em;
+  }
+}
+
+/* ---------- Pie de página ---------- */
+
+.footer-instituto {
+  display: block;
+  padding-left: 14px;
+  border-left: 2px solid var(--gold-bright);
+}
+
+.footer-instituto .nombre-pre {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.footer-instituto .nombre-principal,
+.footer-instituto .nombre-sigla {
+  display: inline;
+  font-family: "Poppins", sans-serif;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+
+/* ---------- Portada ---------- */
+
+.instituto-hero h1.hero-titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  max-width: 1150px;
+}
+
+/* Etiqueta superior: ETDH-AEMG */
+.instituto-hero h1 .hero-sigla {
+  order: -1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 26px;
+  padding: 9px 22px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(.72rem, .9vw, .85rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .28em;
+  color: var(--gold-bright);
+  background: rgba(12, 40, 71, .45);
+  border: 1px solid rgba(233, 196, 106, .55);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  text-shadow: none;
+}
+
+.instituto-hero h1 .hero-sigla::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold-bright);
+  box-shadow: 0 0 10px var(--gold-bright);
+}
+
+/* Título principal */
+.instituto-hero h1 .hero-pre {
+  display: block;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2.2rem, 4.3vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  color: var(--white);
+  text-wrap: balance;
+  text-shadow:
+    0 4px 24px rgba(0, 0, 0, .55),
+    0 2px 4px rgba(0, 0, 0, .3);
+}
+
+/* Subtítulo con línea dorada */
+.instituto-hero h1 .hero-nombre {
+  display: inline-flex;
+  align-items: center;
+  margin: 30px 0 0;
+  padding: 12px 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(.95rem, 1.4vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  background: rgba(12, 40, 71, .45);
+  border: 1px solid rgba(233, 196, 106, .55);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  text-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .instituto-hero h1 .hero-sigla {
+    margin-bottom: 18px;
+    padding: 7px 16px;
+    font-size: .68rem;
+    letter-spacing: .2em;
+  }
+
+  .instituto-hero h1 .hero-pre {
+    font-size: clamp(1.65rem, 7.5vw, 2.3rem);
+  }
+
+  .instituto-hero h1 .hero-nombre {
+    margin-top: 20px;
+    padding: 9px 18px;
+    font-size: .72rem;
+    letter-spacing: .12em;
+  }
+}
+
+/* Espacio para que la portada no quede pegada al menú fijo */
+.instituto-hero {
+  padding-top: 150px;
+}
+
+.instituto-hero-content {
+  transform: none;
+}
+
+@media (max-width: 767px) {
+  .instituto-hero {
+    padding-top: 120px;
+  }
 }
