@@ -1,0 +1,22 @@
+# Solo se sube a GitHub lo que forma parte de la pagina web.
+
+# Bitacora y documentos de trabajo
+*.xlsx
+*.docx
+*.pdf
+
+# Copias de respaldo locales
+COPIAS/
+
+# Imagenes que la pagina no usa
+presentación.png
+
+# Paquetes comprimidos para cPanel
+*.zip
+*.rar
+
+# Archivos del sistema y del editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/

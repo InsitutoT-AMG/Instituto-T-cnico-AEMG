@@ -34,7 +34,7 @@ html {
     background-color: var(--primary-blue);
 
     /* Imagen sin fondo */
-    background-image: url("../imagenesA/portada.jpg");
+    background-image: url("../ImagenesA/portada.jpg");
     background-repeat: no-repeat;
 
 
