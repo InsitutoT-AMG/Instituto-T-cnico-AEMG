@@ -45,10 +45,8 @@ function inicializarNavbar() {
 
   };
 
-  // Estado inicial
   actualizarNavbar();
 
-  // Actualizar mientras se hace scroll
   window.addEventListener("scroll", actualizarNavbar, {
     passive: true
   });
@@ -79,7 +77,6 @@ function inicializarScrollTop() {
 
   };
 
-  // Estado inicial
   actualizarScrollTop();
 
   // Mostrar / ocultar durante el scroll
@@ -87,7 +84,6 @@ function inicializarScrollTop() {
     passive: true
   });
 
-  // Regresar al inicio
   scrollTopButton.addEventListener("click", () => {
 
     window.scrollTo({
@@ -127,7 +123,6 @@ function inicializarMenuMovil() {
 
     link.addEventListener("click", () => {
 
-      // Bootstrap debe estar disponible.
       if (
         typeof bootstrap === "undefined" ||
         !bootstrap.Collapse

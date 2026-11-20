@@ -283,9 +283,6 @@ section {
 
   text-align: center;
 
-  /*
-     Baja todo el bloque ligeramente.
-  */
   transform: translateY(28px);
 }
 
@@ -396,7 +393,6 @@ section {
 }
 
 
-/* Línea izquierda */
 
 .hero-lema::before {
 
@@ -416,7 +412,6 @@ section {
 }
 
 
-/* Línea derecha */
 
 .hero-lema::after {
 
@@ -1865,7 +1860,6 @@ section {
 }
 
 
-/* CONTENEDOR BLANCO */
 
 .entidades-footer {
   background: #ffffff;
@@ -1884,7 +1878,6 @@ section {
 }
 
 
-/* TÍTULO */
 
 .entidades-footer-title {
   display: flex;
@@ -1923,7 +1916,6 @@ section {
 }
 
 
-/* LOGOS */
 
 .entidades-footer-logos {
   display: flex;
@@ -1938,7 +1930,6 @@ section {
 }
 
 
-/* CAJAS DE LOS LOGOS */
 
 .entidades-footer-logos a {
   width: 115px;
@@ -1965,7 +1956,6 @@ section {
 }
 
 
-/* IMÁGENES */
 
 .entidades-footer-logos a img {
   width: 100%;
@@ -1978,7 +1968,6 @@ section {
 }
 
 
-/* HOVER */
 
 .entidades-footer-logos a:hover {
   transform: translateY(-5px);
@@ -2689,7 +2678,6 @@ section {
   }
 
 
-  /* NAVBAR */
 
   .navbar-collapse {
 
@@ -2708,7 +2696,6 @@ section {
   }
 
 
-  /* HERO */
 
   .instituto-hero {
 
@@ -2747,7 +2734,6 @@ section {
   }
 
 
-  /* HERO PÁGINAS */
 
   .page-hero {
 
@@ -2772,7 +2758,6 @@ section {
   }
 
 
-  /* PROGRAMAS */
 
   .programas-grid {
 
@@ -2780,7 +2765,6 @@ section {
   }
 
 
-  /* VENTAJAS */
 
   .ventajas-content {
 
@@ -2793,7 +2777,6 @@ section {
   }
 
 
-  /* NOTICIAS */
 
   .noticias-grid {
 
@@ -2801,7 +2784,6 @@ section {
   }
 
 
-  /* DIRECCIONAMIENTO */
 
   .directional-grid {
 
@@ -2816,7 +2798,6 @@ section {
   }
 
 
-  /* PRINCIPIOS */
 
   .principios-visual {
 
@@ -2966,7 +2947,6 @@ section {
   }
 
 
-  /* LEMA */
 
   .hero-lema {
 
@@ -2990,7 +2970,6 @@ section {
   }
 
 
-  /* BOTONES */
 
   .hero-buttons {
 
@@ -3811,7 +3790,6 @@ section {
 
 @media (max-width: 767px) {
 
-  /* Tarjetas institucionales */
 
   .presentacion .directional-card {
     padding: 28px 23px;
@@ -3823,21 +3801,18 @@ section {
   }
 
 
-  /* Bloque principal */
 
   .directional-principles .principios-visual {
     padding: 38px 25px;
   }
 
 
-  /* Principios en una columna */
 
   .directional-principles .principios-grid {
     grid-template-columns: 1fr;
   }
 
 
-  /* Tarjetas de principios */
 
   .directional-principles .principio-card {
     min-height: auto;
@@ -3847,7 +3822,6 @@ section {
   }
 
 
-  /* Encabezado */
 
   .principios-content-heading {
     margin-left: 0;
@@ -3944,7 +3918,6 @@ section {
   }
 }
 
-/* Celular */
 @media (max-width: 767px) {
   .navbar-brand {
     max-width: calc(100% - 70px);
@@ -4004,7 +3977,6 @@ section {
   max-width: 1150px;
 }
 
-/* Etiqueta superior: ETDH-AEMG */
 .instituto-hero h1 .hero-sigla {
   order: -1;
   display: inline-flex;
@@ -4034,7 +4006,6 @@ section {
   box-shadow: 0 0 10px var(--gold-bright);
 }
 
-/* Título principal */
 .instituto-hero h1 .hero-pre {
   display: block;
   margin: 0;
@@ -4050,7 +4021,6 @@ section {
     0 2px 4px rgba(0, 0, 0, .3);
 }
 
-/* Subtítulo con línea dorada */
 .instituto-hero h1 .hero-nombre {
   display: inline-flex;
   align-items: center;

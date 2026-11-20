@@ -33,7 +33,6 @@ html {
 
     background-color: var(--primary-blue);
 
-    /* Imagen sin fondo */
     background-image: url("../ImagenesA/portada.jpg");
     background-repeat: no-repeat;
 
@@ -42,7 +41,6 @@ html {
     background-position: right center;
 }
 
-/* Fotografías propias por programa */
 
 .programa-hero-comercial.programa-hero {
     background-image: url("../ImagenesA/asesor-comercial.png");
@@ -261,9 +259,6 @@ html {
     text-shadow: 0 3px 15px rgba(0, 0, 0, 0.20);
 }
 
-/*
-   Segunda línea del título
-*/
 
 .programa-hero h1 span {
     display: block;
@@ -316,7 +311,6 @@ html {
     cursor: pointer;
 }
 
-/* Botón principal */
 
 .btn-programa-primary {
     background: var(--gold);
@@ -335,7 +329,6 @@ html {
     transform: translateY(-3px);
 }
 
-/* Botón secundario */
 
 .btn-programa-secondary {
     margin-left: 10px;
